@@ -31,16 +31,20 @@ border:1px solid rgba(255,255,255,0.15);
 z-index:1000;
 }
 
-.logo{
-height:45px;
-overflow:hidden;
+.logo {
+  height: 45px;
+  width: 60px;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
 }
 
-.logo img{
-height:90px;
-margin-top:-20px;
+.logo img {
+  height: 120px;
+  width: auto;
+  margin-top: -38px;
+  margin-left: -18px;
 }
-
 /* NAV */
 
 nav{
