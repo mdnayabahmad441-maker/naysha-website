@@ -251,13 +251,22 @@ footer {
 /* ===== CONTACT LAYOUT IMPROVEMENT ===== */
 /* ===== CONTACT SECTION REFINED ===== */
 
-.contact-wrapper {
-  display: grid;
-  grid-template-columns: 1.3fr 1fr;
-  gap: 80px;
-  align-items: start;
+ .contact-wrapper {
+    display: grid;
+    grid-template-columns: 1.3fr 1fr;
+    gap: 80px;
+    align-items: start;
+    position: relative;   /* ADD THIS */
 }
-
+.contact-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 10%;
+    left: 60%;
+    width: 2px;
+    height: 80%;
+    background: linear-gradient(to bottom, transparent, rgba(120,140,255,0.3), transparent);
+}
 .contact-left {
   padding-top: 40px;
 }
@@ -273,13 +282,22 @@ footer {
 }
 
 .contact-card {
-  padding: 45px;
-  border-radius: 24px;
-  background: rgba(255,255,255,0.06);
-  backdrop-filter: blur(25px);
-  border: 1px solid rgba(255,255,255,0.08);
-  box-shadow: 0 20px 60px rgba(0,0,0,0.4);
-  margin-top: 60px;
+    background: linear-gradient(145deg, rgba(30,40,70,0.85), rgba(20,30,55,0.85));
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(120,140,255,0.25);
+    box-shadow: 
+        0 0 40px rgba(100,120,255,0.15),
+        0 20px 60px rgba(0,0,0,0.4);
+    backdrop-filter: blur(14px);
+    transition: all 0.3s ease;
+}
+
+.contact-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 
+        0 0 60px rgba(120,140,255,0.25),
+        0 30px 80px rgba(0,0,0,0.5);
 }
 
 .contact-card h3 {
@@ -339,4 +357,5 @@ footer {
     grid-template-columns: 1fr;
   }
 }
+
 
