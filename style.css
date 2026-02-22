@@ -1,7 +1,4 @@
-/* ============================= */
-/* GLOBAL STYLES */
-/* ============================= */
-
+/* GLOBAL */
 * {
   margin: 0;
   padding: 0;
@@ -10,29 +7,24 @@
 
 body {
   font-family: 'Inter', sans-serif;
-  background-color: #0f172a;
+  background: #0b1220;
   color: #ffffff;
   line-height: 1.6;
 }
 
 .container {
   width: 90%;
-  max-width: 1200px;
+  max-width: 1100px;
   margin: auto;
 }
 
-section {
-  padding: 80px 0;
-}
-
-/* ============================= */
-/* HEADER */
-/* ============================= */
-
+/* NAVIGATION */
 header {
   background: #0f172a;
   padding: 20px 0;
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 100;
 }
 
 .nav-container {
@@ -42,65 +34,52 @@ header {
 }
 
 .logo-container img {
-  height: 45px;
+  height: 40px;
 }
 
 nav a {
   color: #ffffff;
+  margin-left: 20px;
   text-decoration: none;
-  margin-left: 30px;
   font-weight: 500;
-  transition: 0.3s;
 }
 
 nav a:hover {
   color: #6366f1;
 }
 
-.btn-nav {
-  background: #6366f1;
-  padding: 10px 18px;
-  border-radius: 6px;
-}
-
-/* ============================= */
 /* HERO */
-/* ============================= */
-
 .hero {
+  padding: 100px 0;
   text-align: center;
-  padding: 120px 0;
-  background: linear-gradient(135deg, #0f172a, #1e293b);
+  background: linear-gradient(135deg, #0b1220, #111827);
 }
 
 .hero h1 {
-  font-size: 48px;
+  font-size: 42px;
   font-weight: 800;
   margin-bottom: 20px;
 }
 
 .hero p {
-  font-size: 18px;
-  max-width: 700px;
-  margin: 0 auto 30px auto;
-  color: #cbd5e1;
+  max-width: 600px;
+  margin: auto;
+  opacity: 0.8;
+  margin-bottom: 30px;
 }
 
-.hero-buttons {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
+/* BUTTONS */
 .btn-primary {
   background: #6366f1;
-  padding: 14px 28px;
+  color: #fff;
+  padding: 12px 25px;
   border-radius: 8px;
-  color: white;
   text-decoration: none;
+  display: inline-block;
+  margin: 5px;
   font-weight: 600;
-  transition: 0.3s;
+  border: none;
+  cursor: pointer;
 }
 
 .btn-primary:hover {
@@ -109,128 +88,125 @@ nav a:hover {
 
 .btn-secondary {
   border: 1px solid #6366f1;
-  padding: 14px 28px;
-  border-radius: 8px;
   color: #6366f1;
+  padding: 12px 25px;
+  border-radius: 8px;
   text-decoration: none;
-  font-weight: 600;
-  transition: 0.3s;
+  display: inline-block;
+  margin: 5px;
 }
 
 .btn-secondary:hover {
   background: #6366f1;
-  color: white;
+  color: #fff;
 }
 
-/* ============================= */
-/* SOLUTIONS */
-/* ============================= */
+/* SECTIONS */
+.section {
+  padding: 80px 0;
+}
 
-.solutions h2,
-.industries h2,
-.contact h2 {
+.section.dark {
+  background: #111827;
+}
+
+.section h2 {
   text-align: center;
-  font-size: 36px;
   margin-bottom: 50px;
+  font-size: 32px;
 }
 
-.solution-grid,
-.industry-grid {
+/* GRID */
+.grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 30px;
+  gap: 25px;
 }
 
-.card,
-.industry-card {
-  background: #1e293b;
+.card {
+  background: #1f2937;
   padding: 30px;
   border-radius: 12px;
-  transition: 0.3s;
-  border: 1px solid rgba(255,255,255,0.05);
+  transition: 0.3s ease;
 }
 
-.card:hover,
-.industry-card:hover {
-  transform: translateY(-8px);
-  border-color: #6366f1;
+.card:hover {
+  transform: translateY(-5px);
+  background: #273549;
 }
 
-.card h3,
-.industry-card h3 {
+.card h3 {
   margin-bottom: 15px;
-  font-size: 20px;
+  color: #6366f1;
 }
 
-.card p,
-.industry-card p {
-  color: #cbd5e1;
+/* PROCESS */
+.process-grid .card {
+  text-align: center;
 }
 
-/* ============================= */
-/* CONTACT */
-/* ============================= */
-
-.contact form {
-  max-width: 600px;
-  margin: auto;
+/* CONTACT FORM */
+.contact-form {
+  margin-top: 30px;
   display: flex;
   flex-direction: column;
-  gap: 20px;
+  gap: 15px;
+  max-width: 500px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
-.contact input,
-.contact textarea {
-  padding: 14px;
+.contact-form input,
+.contact-form textarea {
+  padding: 12px;
   border-radius: 8px;
   border: none;
-  font-size: 16px;
-  background: #1e293b;
-  color: white;
+  background: #1f2937;
+  color: #fff;
+  font-size: 14px;
 }
 
-.contact textarea {
-  resize: vertical;
-  min-height: 120px;
+.contact-form textarea {
+  resize: none;
+  height: 100px;
 }
 
-.contact button {
-  background: #6366f1;
-  padding: 14px;
-  border-radius: 8px;
-  border: none;
-  font-weight: 600;
-  cursor: pointer;
-  transition: 0.3s;
-  color: white;
+.contact-form input:focus,
+.contact-form textarea:focus {
+  outline: 2px solid #6366f1;
 }
 
-.contact button:hover {
-  background: #4f46e5;
-}
-
-/* ============================= */
-/* FOOTER */
-/* ============================= */
-
-footer {
+/* CONTACT INFO */
+.contact-info {
   text-align: center;
-  padding: 30px 0;
-  background: #0f172a;
-  border-top: 1px solid rgba(255,255,255,0.05);
-  color: #94a3b8;
+  margin-top: 30px;
+  opacity: 0.8;
 }
 
-/* ============================= */
-/* RESPONSIVE */
-/* ============================= */
+/* FOOTER */
+footer {
+  background: #0f172a;
+  padding: 20px 0;
+  text-align: center;
+  margin-top: 40px;
+  opacity: 0.7;
+}
 
-@media (max-width: 768px) {
-  .hero h1 {
-    font-size: 32px;
-  }
+/* WHATSAPP BUTTON */
+.whatsapp-float {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: #25D366;
+  color: #fff;
+  padding: 12px 18px;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: 600;
+  box-shadow: 0 5px 15px rgba(0,0,0,0.3);
+  transition: 0.3s;
+}
 
-  nav a {
-    margin-left: 15px;
-  }
+.whatsapp-float:hover {
+  background: #1ebe5d;
 }
