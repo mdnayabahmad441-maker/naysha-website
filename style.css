@@ -33,18 +33,18 @@ z-index:1000;
 
 .logo {
   height: 45px;
-  width: 120px;
+  padding: 6px 14px;
+  background: rgba(255,255,255,0.08);
+  border-radius: 12px;
   display: flex;
   align-items: center;
   justify-content: center;
-  overflow: hidden;
 }
 
 .logo img {
-  height: 55px;
+  height: 38px;
   width: auto;
-  object-fit: contain;
-  mix-blend-mode: multiply;
+  display: block;
 }
 /* NAV */
 
@@ -236,5 +236,6 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
 
 
