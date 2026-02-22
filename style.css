@@ -21,11 +21,17 @@ header {
     width: 100%;
     padding: 20px 8%;
     display: flex;
-    justify-content: space-between;
     align-items: center;
+    justify-content: center; /* CENTER NAV */
     background: rgba(10, 15, 30, 0.85);
     backdrop-filter: blur(10px);
     z-index: 1000;
+}
+
+/* Keep logo on left */
+.logo-container {
+    position: absolute;
+    left: 8%;
 }
 
 .logo-container img {
@@ -34,8 +40,13 @@ header {
     display: block;
 }
 
+nav {
+    display: flex;
+    align-items: center;
+    gap: 40px;
+}
+
 nav a {
-    margin-left: 30px;
     color: white;
     text-decoration: none;
     font-weight: 500;
@@ -45,7 +56,6 @@ nav a {
 nav a:hover {
     color: #8b9cff;
 }
-
 /* ===== HERO ===== */
 
 .hero {
@@ -268,3 +278,4 @@ footer {
         display: none;
     }
 }
+
