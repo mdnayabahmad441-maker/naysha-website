@@ -30,17 +30,27 @@ border-radius:50px;
 border:1px solid rgba(255,255,255,0.15);
 z-index:1000;
 }
-
-.logo{
-height:45px;
-overflow:hidden;
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
 }
 
-.logo img{
-height:90px;
-margin-top:-20px;
+.logo img {
+  height: 42px;
+  width: auto;
+  display: block;
+  margin: 0;   /* remove negative margin */
 }
 
+.brand-name {
+  font-size: 18px;
+  font-weight: 600;
+  background: linear-gradient(90deg, #7c5cff, #4bdfff);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  letter-spacing: 0.5px;
+}
 /* NAV */
 
 nav{
@@ -231,3 +241,4 @@ opacity:1;
 transform:translateY(0);
 }
 }
+
