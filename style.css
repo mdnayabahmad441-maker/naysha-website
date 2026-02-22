@@ -248,3 +248,44 @@ footer {
 .whatsapp-float:hover {
   transform: translateY(-5px);
 }
+/* ===== CONTACT LAYOUT IMPROVEMENT ===== */
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1.2fr 1fr;
+  gap: 60px;
+  align-items: center;
+}
+
+.contact-left h2 {
+  margin-bottom: 20px;
+}
+
+.contact-left p {
+  margin-bottom: 30px;
+  opacity: 0.8;
+}
+
+.contact-card {
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+}
+
+.contact-card h3 {
+  margin-bottom: 25px;
+  color: #818cf8;
+}
+
+.contact-card p {
+  margin-bottom: 20px;
+  opacity: 0.85;
+}
+
+/* Mobile Responsive */
+@media (max-width: 900px) {
+  .contact-wrapper {
+    grid-template-columns: 1fr;
+  }
+}
