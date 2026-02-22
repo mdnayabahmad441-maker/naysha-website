@@ -12,29 +12,38 @@ body {
     overflow-x: hidden;
 }
 
-/* ===== NAVBAR ===== */
+/* ===== NAVBAR (GLASSY) ===== */
 header {
     position: fixed;
-    top: 0;
-    width: 100%;
-    padding: 20px 8%;
+    top: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 85%;
+    padding: 15px 40px;
     display: flex;
     align-items: center;
     justify-content: center;
-    background: rgba(10, 15, 30, 0.85);
-    backdrop-filter: blur(12px);
+    border-radius: 50px;
+
+    background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(15px);
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.4);
+
     z-index: 1000;
 }
 
+/* Logo */
 .logo-container {
     position: absolute;
-    left: 8%;
+    left: 40px;
 }
 
 .logo-container img {
-    height: 50px;
+    height: 45px;
 }
 
+/* Nav */
 nav {
     display: flex;
     gap: 40px;
@@ -45,35 +54,54 @@ nav a {
     color: white;
     text-decoration: none;
     font-weight: 500;
+    position: relative;
     transition: 0.3s;
 }
 
-nav a:hover {
-    color: #8b9cff;
+nav a::after {
+    content: "";
+    position: absolute;
+    width: 0%;
+    height: 2px;
+    left: 0;
+    bottom: -5px;
+    background: #8b9cff;
+    transition: 0.3s;
+}
+
+nav a:hover::after {
+    width: 100%;
 }
 
 .nav-btn {
     background: linear-gradient(90deg, #7f5af0, #6c63ff);
     padding: 10px 22px;
-    border-radius: 25px;
+    border-radius: 30px;
     font-weight: 600;
+    transition: 0.3s;
+}
+
+.nav-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(108,99,255,0.4);
 }
 
 /* ===== HERO ===== */
 .hero {
     min-height: 100vh;
-    padding: 140px 8% 100px;
+    padding: 180px 8% 100px;
     display: flex;
     align-items: center;
 }
 
 .hero-content {
     max-width: 650px;
+    animation: fadeUp 1s ease forwards;
 }
 
 .hero h1 {
-    font-size: 60px;
-    line-height: 1.2;
+    font-size: 64px;
+    line-height: 1.1;
     margin-bottom: 25px;
 }
 
@@ -95,17 +123,18 @@ nav a:hover {
 }
 
 .hero-btn:hover {
-    transform: translateY(-3px);
+    transform: translateY(-4px);
+    box-shadow: 0 10px 25px rgba(108,99,255,0.5);
 }
 
-/* ===== SERVICES ===== */
+/* ===== SERVICES (GLASS CARDS) ===== */
 .services {
-    padding: 100px 8%;
+    padding: 120px 8%;
     text-align: center;
 }
 
 .services h2 {
-    margin-bottom: 60px;
+    margin-bottom: 70px;
 }
 
 .services-list {
@@ -116,25 +145,28 @@ nav a:hover {
 
 .services-list div {
     background: rgba(255,255,255,0.05);
-    padding: 30px;
-    border-radius: 15px;
-    transition: 0.3s;
+    backdrop-filter: blur(12px);
+    padding: 40px;
+    border-radius: 20px;
+    border: 1px solid rgba(255,255,255,0.08);
+    transition: 0.4s;
 }
 
 .services-list div:hover {
-    background: rgba(255,255,255,0.08);
+    transform: translateY(-8px);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
 }
 
 /* ===== CONTACT ===== */
 .contact-section {
-    padding: 100px 8%;
+    padding: 120px 8%;
 }
 
 .contact-wrapper {
     display: grid;
     grid-template-columns: 1.3fr 1fr;
     gap: 80px;
-    align-items: center; /* FIXED PROPERLY */
+    align-items: center;
 }
 
 .contact-left h2 {
@@ -154,32 +186,52 @@ form {
 
 form input,
 form textarea {
-    padding: 14px;
-    border-radius: 8px;
-    border: none;
+    padding: 16px;
+    border-radius: 12px;
+    border: 1px solid rgba(255,255,255,0.1);
     background: rgba(255,255,255,0.05);
+    backdrop-filter: blur(10px);
     color: white;
+    transition: 0.3s;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #7f5af0;
+    box-shadow: 0 0 15px rgba(127,90,240,0.3);
 }
 
 form textarea {
-    min-height: 120px;
+    min-height: 130px;
     resize: none;
 }
 
 form button {
     background: linear-gradient(90deg, #7f5af0, #6c63ff);
-    padding: 14px;
+    padding: 16px;
     border: none;
-    border-radius: 25px;
+    border-radius: 30px;
     color: white;
     font-weight: 600;
     cursor: pointer;
+    transition: 0.3s;
 }
 
+form button:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 15px 30px rgba(108,99,255,0.4);
+}
+
+/* Contact Card (GLASS) */
 .contact-card {
     background: rgba(255,255,255,0.05);
-    padding: 40px;
-    border-radius: 20px;
+    backdrop-filter: blur(15px);
+    padding: 50px;
+    border-radius: 25px;
+    border: 1px solid rgba(255,255,255,0.08);
+    box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+    animation: fadeUp 1.2s ease forwards;
 }
 
 /* ===== WHATSAPP ===== */
@@ -194,4 +246,21 @@ form button {
     font-weight: 600;
     text-decoration: none;
     box-shadow: 0 10px 25px rgba(0,0,0,0.4);
+    transition: 0.3s;
+}
+
+.whatsapp-float:hover {
+    transform: translateY(-5px);
+}
+
+/* ===== ANIMATION ===== */
+@keyframes fadeUp {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
