@@ -191,4 +191,17 @@ text-decoration:none;
 .hero h1{font-size:36px}
 }
 
+.pricing-content {
+  display: none;
+}
+
+.pricing-content.active {
+  display: block;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
 
