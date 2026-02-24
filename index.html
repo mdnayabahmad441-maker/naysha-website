@@ -106,7 +106,7 @@
           <ul>
             <li>✔ CRM Setup</li>
             <li>✔ WhatsApp Automation</li>
-            <li>✔ Inquiry Form Integration</li>
+            <li>✔ Inquiry Integration</li>
             <li>✔ Basic Dashboard</li>
             <li>✔ 30 Days Support</li>
           </ul>
@@ -120,11 +120,10 @@
         <p>₹2,999 / month</p>
         <div class="plan-details">
           <ul>
-            <li>✔ Advanced CRM Setup</li>
+            <li>✔ Advanced CRM</li>
             <li>✔ WhatsApp + Email Automation</li>
-            <li>✔ Lead Tracking Dashboard</li>
-            <li>✔ Performance Optimization</li>
-            <li>✔ 60 Days Support</li>
+            <li>✔ Performance Tracking</li>
+            <li>✔ Optimization Support</li>
           </ul>
         </div>
       </div>
@@ -136,10 +135,103 @@
         <div class="plan-details">
           <ul>
             <li>✔ Full Automation Suite</li>
-            <li>✔ AI Chatbot Integration</li>
-            <li>✔ Advanced Dashboard</li>
-            <li>✔ Continuous Optimization</li>
+            <li>✔ AI Chatbot</li>
+            <li>✔ Advanced Analytics</li>
             <li>✔ Priority Support</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CLINIC -->
+  <div class="pricing-content" id="clinic">
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>Solo Doctor</h3>
+        <div class="price">₹9,999</div>
+        <p>₹2,499 / month</p>
+        <div class="plan-details">
+          <ul>
+            <li>✔ Appointment Automation</li>
+            <li>✔ WhatsApp Reminders</li>
+            <li>✔ CRM Tracking</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Multi-Doctor Clinic</h3>
+        <div class="price">₹19,999</div>
+        <p>₹4,999 / month</p>
+        <div class="plan-details">
+          <ul>
+            <li>✔ Multi-User CRM</li>
+            <li>✔ Automated Follow-ups</li>
+            <li>✔ Performance Dashboard</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <h3>High Volume Clinic</h3>
+        <div class="price">₹29,999</div>
+        <p>₹7,999 / month</p>
+        <div class="plan-details">
+          <ul>
+            <li>✔ Full Clinic Automation</li>
+            <li>✔ AI Integration</li>
+            <li>✔ Advanced Reports</li>
+          </ul>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REAL ESTATE -->
+  <div class="pricing-content" id="realestate">
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>Agent Starter</h3>
+        <div class="price">₹8,999</div>
+        <p>₹2,499 / month</p>
+        <div class="plan-details">
+          <ul>
+            <li>✔ Lead Capture</li>
+            <li>✔ WhatsApp Automation</li>
+            <li>✔ Basic CRM</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Agent Growth</h3>
+        <div class="price">₹15,999</div>
+        <p>₹3,999 / month</p>
+        <div class="plan-details">
+          <ul>
+            <li>✔ Advanced CRM</li>
+            <li>✔ Campaign Automation</li>
+            <li>✔ Performance Reports</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Agency Pro</h3>
+        <div class="price">₹29,999</div>
+        <p>₹6,999 / month</p>
+        <div class="plan-details">
+          <ul>
+            <li>✔ Full Agency Automation</li>
+            <li>✔ Multi-Agent CRM</li>
+            <li>✔ AI Chat Assistant</li>
           </ul>
         </div>
       </div>
@@ -172,6 +264,20 @@
 <a href="#" class="whatsapp">Chat on WhatsApp</a>
 
 <script>
+/* Pricing Tabs */
+const tabs = document.querySelectorAll(".pricing-tabs button");
+const contents = document.querySelectorAll(".pricing-content");
+
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(btn => btn.classList.remove("active"));
+    tab.classList.add("active");
+    contents.forEach(content => content.classList.remove("active"));
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
+});
+
+/* Expandable Plans */
 const pricingCards = document.querySelectorAll(".pricing-card");
 pricingCards.forEach(card => {
   card.addEventListener("click", () => {
@@ -180,6 +286,16 @@ pricingCards.forEach(card => {
     });
     card.classList.toggle("active");
   });
+});
+
+/* Custom Cursor FIXED */
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", e => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
 });
 </script>
 
