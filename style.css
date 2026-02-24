@@ -339,3 +339,32 @@ body {
 .pricing-card.active .plan-details {
   max-height: 500px;
 }
+/* Expandable Plans */
+.plan-details {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  margin-top: 15px;
+  text-align: left;
+}
+
+.pricing-card.active .plan-details {
+  max-height: 500px;
+}
+
+/* Cursor Fix */
+.cursor-glow {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  position: fixed;
+  pointer-events: none;
+  background: radial-gradient(circle, #7c5cff, #4bdfff);
+  mix-blend-mode: screen;
+  transform: translate(-50%, -50%);
+  z-index: 9999;
+}
+
+body {
+  cursor: none;
+}
