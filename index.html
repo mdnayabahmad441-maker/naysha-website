@@ -337,7 +337,27 @@ document.addEventListener("mousemove", e => {
   cursor.style.top = e.clientY + "px";
 });
 </script>
+<script>
+/* Mobile WhatsApp Smart Toggle */
+function handleWhatsAppVisibility() {
+  const whatsapp = document.querySelector(".whatsapp");
 
+  if (window.innerWidth <= 768) {
+    if (window.scrollY > 300) {
+      whatsapp.classList.add("show");
+    } else {
+      whatsapp.classList.remove("show");
+    }
+  } else {
+    whatsapp.classList.add("show"); // always visible on desktop
+  }
+}
+
+window.addEventListener("scroll", handleWhatsAppVisibility);
+window.addEventListener("load", handleWhatsAppVisibility);
+window.addEventListener("resize", handleWhatsAppVisibility);
+</script>
 </body>
 </html>
+
 
