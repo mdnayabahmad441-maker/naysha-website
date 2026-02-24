@@ -1,361 +1,230 @@
-/* ================= GLOBAL ================= */
-
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
 }
 
-html {
-  scroll-behavior: smooth;
+body{
+  font-family:'Inter',sans-serif;
+  background:linear-gradient(135deg,#0f172a,#0b1120);
+  color:white;
 }
 
-body {
-  font-family: 'Inter', sans-serif;
-  background: linear-gradient(135deg, #0f172a, #0b1120);
-  color: white;
+header{
+  position:fixed;
+  top:25px;
+  width:100%;
+  display:flex;
+  justify-content:center;
+  z-index:1000;
 }
 
-/* ================= HEADER ================= */
-
-header {
-  position: fixed;
-  width: 100%;
-  top: 20px;
-  display: flex;
-  justify-content: center;
-  z-index: 1000;
+.nav{
+  display:flex;
+  align-items:center;
+  gap:40px;
+  padding:15px 40px;
+  border-radius:50px;
+  background:rgba(255,255,255,0.06);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.1);
 }
 
-header .logo {
-  display: flex;
-  align-items: center;
-  gap: 10px;
+.logo{
+  display:flex;
+  align-items:center;
+  gap:10px;
 }
 
-header img {
-  height: 40px;
+.logo img{
+  height:40px;
 }
 
-.brand-name {
-  font-weight: 600;
-  font-size: 18px;
+.nav-links{
+  display:flex;
+  gap:30px;
 }
 
-.nav {
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(15px);
-  border-radius: 50px;
-  padding: 15px 40px;
-  display: flex;
-  align-items: center;
-  gap: 40px;
+.nav-links a{
+  color:white;
+  text-decoration:none;
+  opacity:0.8;
+  font-size:14px;
 }
 
-.nav-links {
-  display: flex;
-  gap: 30px;
+.nav-btn{
+  background:linear-gradient(90deg,#7c5cff,#4bdfff);
+  padding:8px 18px;
+  border-radius:25px;
 }
 
-.nav a {
-  text-decoration: none;
-  color: white;
-  font-size: 14px;
+.hero{
+  padding:200px 20px 120px;
+  text-align:center;
 }
 
-.nav-btn {
-  background: linear-gradient(90deg,#7c5cff,#4bdfff);
-  padding: 8px 18px;
-  border-radius: 20px;
+.hero h1{
+  font-size:54px;
+  margin-bottom:20px;
 }
 
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  cursor: pointer;
+.hero p{
+  opacity:0.8;
+  margin-bottom:30px;
 }
 
-.menu-toggle span {
-  width: 25px;
-  height: 3px;
-  background: white;
+.hero-btn{
+  background:linear-gradient(90deg,#7c5cff,#4bdfff);
+  padding:14px 30px;
+  border-radius:40px;
+  text-decoration:none;
+  color:white;
+  font-weight:600;
 }
 
-/* ================= HERO ================= */
-
-.hero {
-  padding: 180px 20px 120px;
-  text-align: center;
+.section{
+  padding:120px 20px;
+  text-align:center;
 }
 
-.hero h1 {
-  font-size: 52px;
-  margin-bottom: 20px;
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
 }
 
-.hero p {
-  max-width: 700px;
-  margin: 0 auto 30px;
-  opacity: 0.8;
+.card{
+  padding:40px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.08);
 }
 
-.hero-btn {
-  background: linear-gradient(90deg,#7c5cff,#4bdfff);
-  padding: 14px 28px;
-  border-radius: 40px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
+/* PRICING */
+
+.pricing-tabs{
+  display:flex;
+  justify-content:center;
+  gap:20px;
+  margin:40px 0;
 }
 
-/* ================= SECTION ================= */
-
-.section {
-  padding: 100px 20px;
-  text-align: center;
+.tab{
+  padding:10px 25px;
+  border-radius:30px;
+  border:1px solid rgba(255,255,255,0.2);
+  background:rgba(255,255,255,0.05);
+  color:white;
+  cursor:pointer;
 }
 
-.section h2 {
-  font-size: 36px;
-  margin-bottom: 60px;
+.tab.active{
+  background:linear-gradient(90deg,#7c5cff,#4bdfff);
+  border:none;
 }
 
-/* ================= GRID ================= */
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit,minmax(250px,1fr));
-  gap: 30px;
-  max-width: 1100px;
-  margin: auto;
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:30px;
+  max-width:1100px;
+  margin:auto;
 }
 
-.card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  padding: 40px;
-  transition: 0.3s;
+.pricing-card{
+  padding:40px;
+  border-radius:20px;
+  background:rgba(255,255,255,0.05);
+  backdrop-filter:blur(20px);
+  border:1px solid rgba(255,255,255,0.08);
+  position:relative;
 }
 
-.card:hover {
-  transform: translateY(-5px);
+.featured{
+  border:2px solid #7c5cff;
 }
 
-/* ================= PRICING ================= */
-
-.pricing-tabs {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  margin-bottom: 60px;
+.popular{
+  position:absolute;
+  top:-12px;
+  right:20px;
+  background:linear-gradient(90deg,#7c5cff,#4bdfff);
+  padding:5px 12px;
+  border-radius:20px;
+  font-size:12px;
 }
 
-.tab {
-  padding: 12px 25px;
-  border-radius: 30px;
-  border: 1px solid rgba(255,255,255,0.2);
-  background: rgba(255,255,255,0.05);
-  color: white;
-  cursor: pointer;
-  transition: 0.3s;
+.price{
+  font-size:28px;
+  margin:20px 0 5px;
 }
 
-.tab.active {
-  background: linear-gradient(90deg,#7c5cff,#4bdfff);
-  border: none;
+.monthly{
+  opacity:0.7;
+  font-size:14px;
 }
 
-/* ===== 3 CARDS PER ROW ===== */
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-  max-width: 1100px;
-  margin: 0 auto 60px;
+.tab-content{
+  display:none;
 }
 
-.pricing-card {
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-  padding: 40px 20px;
-  transition: 0.3s;
-  position: relative;
-}
-
-.pricing-card:hover {
-  transform: translateY(-5px);
-}
-
-.featured {
-  border: 2px solid #7c5cff;
-}
-
-.popular {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: linear-gradient(90deg,#7c5cff,#4bdfff);
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
-.price {
-  font-size: 28px;
-  margin: 20px 0 5px;
-}
-
-.monthly {
-  opacity: 0.7;
-  font-size: 14px;
-}
-
-/* ================= ROI ================= */
-
-.roi-section {
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 40px;
-  background: rgba(255,255,255,0.05);
-  border-radius: 20px;
-}
-
-/* ================= ADDONS ================= */
-
-.addons {
-  margin-bottom: 120px;
-}
-
-.addons .grid {
-  margin-top: 30px;
+.tab-content.active{
+  display:block;
 }
 
 /* ================= CONTACT ================= */
 
-.contact {
-  padding: 100px 20px;
+.contact-section {
+  padding: 120px 20px;
   text-align: center;
 }
 
-.contact form {
-  max-width: 500px;
-  margin: auto;
-  display: flex;
-  flex-direction: column;
-  gap: 20px;
+.contact-section h2 {
+  margin-bottom: 60px;
+  font-size: 32px;
 }
 
-.contact input,
-.contact textarea {
-  padding: 15px;
-  border-radius: 10px;
-  border: none;
-}
-
-.contact button {
-  padding: 14px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(90deg,#7c5cff,#4bdfff);
-  color: white;
-  font-weight: 600;
-}
-
-/* ================= WHATSAPP ================= */
-
-.whatsapp {
-  position: fixed;
-  right: 30px;
-  bottom: 30px;
-  background: #22c55e;
-  padding: 14px 25px;
-  border-radius: 40px;
-  text-decoration: none;
-  color: white;
-  font-weight: 600;
-}
-
-/* ================= MOBILE ================= */
-
-@media (max-width: 992px) {
-
-  .pricing-grid {
-    grid-template-columns: repeat(2, 1fr);
-  }
-
-}
-
-@media (max-width: 768px) {
-
-  .nav-links {
-    display: none;
-  }
-
-  .menu-toggle {
-    display: flex;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .hero h1 {
-    font-size: 34px;
-  }
-
-}
-/* ================= CONTACT PREMIUM ================= */
-
-.contact-section {
-  padding: 120px 20px;
-}
-
-.contact-container {
+.contact-wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 40px;
   max-width: 1100px;
   margin: auto;
-  display: grid;
-  grid-template-columns: 1.2fr 0.8fr;
-  gap: 60px;
-  align-items: center;
 }
 
-.contact-left h2 {
-  font-size: 32px;
-  margin-bottom: 15px;
+.contact-box,
+.contact-card {
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.08);
+  text-align: left;
 }
 
-.contact-left p {
-  margin-bottom: 30px;
-  opacity: 0.8;
-}
-
-.contact-left form {
+.contact-box form {
   display: flex;
   flex-direction: column;
   gap: 20px;
 }
 
-.contact-left input,
-.contact-left textarea {
-  padding: 16px;
-  border-radius: 12px;
+.contact-box input,
+.contact-box textarea {
+  padding: 14px;
   border: none;
+  border-radius: 12px;
   background: rgba(255,255,255,0.08);
   color: white;
-  font-size: 14px;
+  font-family: inherit;
 }
 
-.contact-left textarea {
-  min-height: 120px;
-  resize: none;
-}
-
-.contact-left button {
-  padding: 16px;
-  border-radius: 40px;
+.contact-box button {
+  padding: 14px;
   border: none;
+  border-radius: 40px;
   background: linear-gradient(90deg,#7c5cff,#4bdfff);
   color: white;
   font-weight: 600;
@@ -363,15 +232,8 @@ header img {
   transition: 0.3s;
 }
 
-.contact-left button:hover {
-  transform: translateY(-3px);
-}
-
-.contact-card {
-  background: rgba(255,255,255,0.05);
-  padding: 40px;
-  border-radius: 20px;
-  backdrop-filter: blur(20px);
+.contact-box button:hover {
+  transform: translateY(-2px);
 }
 
 .contact-card h3 {
@@ -379,14 +241,31 @@ header img {
 }
 
 .contact-card p {
-  margin-bottom: 15px;
-  opacity: 0.85;
+  margin-bottom: 12px;
+  opacity: 0.8;
 }
 
-/* MOBILE */
-
-@media (max-width: 900px) {
-  .contact-container {
+/* Responsive */
+@media(max-width: 768px) {
+  .contact-wrapper {
     grid-template-columns: 1fr;
+  }
+}
+
+
+/* RESPONSIVE */
+
+@media(max-width:992px){
+  .pricing-grid{
+    grid-template-columns:repeat(2,1fr);
+  }
+}
+
+@media(max-width:768px){
+  .pricing-grid{
+    grid-template-columns:1fr;
+  }
+  .hero h1{
+    font-size:36px;
   }
 }
