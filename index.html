@@ -166,6 +166,38 @@ tabs.forEach(tab => {
   });
 });
 </script>
+  <script>
+
+/* Scroll Reveal */
+const revealElements = document.querySelectorAll(
+  ".hero, .section, .pricing, .contact"
+);
+
+const observer = new IntersectionObserver(entries => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      entry.target.classList.add("active");
+    }
+  });
+}, { threshold: 0.2 });
+
+revealElements.forEach(el => {
+  el.classList.add("reveal");
+  observer.observe(el);
+});
+
+/* Custom Cursor */
+const cursor = document.createElement("div");
+cursor.classList.add("cursor-glow");
+document.body.appendChild(cursor);
+
+document.addEventListener("mousemove", e => {
+  cursor.style.left = e.clientX + "px";
+  cursor.style.top = e.clientY + "px";
+});
+
+</script>
 </body>
 </html>
+
 
