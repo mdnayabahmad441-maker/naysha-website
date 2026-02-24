@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NaySha Automation Agency</title>
+<title>NaySha Automation</title>
 
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
@@ -11,47 +11,34 @@
 
 <body>
 
+<!-- ================= HEADER ================= -->
+
 <header>
+  <div class="nav">
+    <div class="logo">
+      <img src="logo.png" alt="Logo">
+      <span>NaySha Automation</span>
+    </div>
 
-  <div class="logo">
-    <img src="logo.png" alt="NaySha Logo">
-    <span class="brand-name">NaySha Automation</span>
-  </div>
-
-  <nav class="nav">
     <div class="nav-links">
       <a href="#services">Services</a>
-      <a href="#industries">Industries</a>
-      <a href="#process">Process</a>
       <a href="#pricing">Pricing</a>
+      <a href="#contact">Contact</a>
       <a href="#contact" class="nav-btn">Get Started</a>
     </div>
-
-    <div class="menu-toggle" id="menuToggle">
-      <span></span>
-      <span></span>
-      <span></span>
-    </div>
-  </nav>
-
+  </div>
 </header>
 
-<div class="mobile-menu" id="mobileMenu">
-  <a href="#services">Services</a>
-  <a href="#industries">Industries</a>
-  <a href="#process">Process</a>
-  <a href="#pricing">Pricing</a>
-  <a href="#contact">Get Started</a>
-</div>
+<!-- ================= HERO ================= -->
 
-<!-- HERO -->
 <section class="hero">
   <h1>Automate Your Business Growth.</h1>
-  <p>NaySha builds complete automation systems for Real Estate, Education, Clinics, and growing businesses.</p>
+  <p>Complete automation systems for Schools, Clinics & Real Estate businesses.</p>
   <a href="#contact" class="hero-btn">Book Free Strategy Call</a>
 </section>
 
-<!-- SERVICES -->
+<!-- ================= SERVICES ================= -->
+
 <section id="services" class="section">
   <h2>Our Automation Services</h2>
   <div class="grid">
@@ -64,127 +51,106 @@
   </div>
 </section>
 
-<!-- PRICING -->
+<!-- ================= PRICING ================= -->
+
 <section id="pricing" class="section">
+  <h2>Industry-Based Automation Plans</h2>
 
-<h2>Industry-Based Automation Plans</h2>
-
-<div class="pricing-tabs">
-  <button class="tab active" data-tab="school">School</button>
-  <button class="tab" data-tab="clinic">Clinic</button>
-  <button class="tab" data-tab="realestate">Real Estate</button>
-</div>
-
-<!-- SCHOOL -->
-<div class="tab-content active" id="school">
-  <div class="pricing-grid">
-
-    <div class="pricing-card">
-      <h4>Starter School System</h4>
-      <p class="price">₹6,999 Setup</p>
-      <p class="monthly">₹1,499 / month</p>
-    </div>
-
-    <div class="pricing-card featured">
-      <div class="popular">Most Popular</div>
-      <h4>Growth School System</h4>
-      <p class="price">₹11,999 Setup</p>
-      <p class="monthly">₹2,999 / month</p>
-    </div>
-
-    <div class="pricing-card">
-      <h4>Elite School Automation</h4>
-      <p class="price">₹14,999 Setup</p>
-      <p class="monthly">₹4,999 / month</p>
-    </div>
-
+  <div class="pricing-tabs">
+    <button class="tab active" data-tab="school">School</button>
+    <button class="tab" data-tab="clinic">Clinic</button>
+    <button class="tab" data-tab="realestate">Real Estate</button>
   </div>
-</div>
 
-<!-- CLINIC -->
-<div class="tab-content" id="clinic">
-  <div class="pricing-grid">
+  <!-- SCHOOL -->
+  <div class="tab-content active" id="school">
+    <div class="pricing-grid">
 
-    <div class="pricing-card">
-      <h4>Basic Clinic</h4>
-      <p class="price">₹9,999 Setup</p>
-      <p class="monthly">₹2,499 / month</p>
+      <div class="pricing-card">
+        <h3>Starter School System</h3>
+        <p class="price">₹6,999 Setup</p>
+        <p class="monthly">₹1,499 / month</p>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="popular">Most Popular</div>
+        <h3>Growth School System</h3>
+        <p class="price">₹11,999 Setup</p>
+        <p class="monthly">₹2,999 / month</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Elite School Automation</h3>
+        <p class="price">₹14,999 Setup</p>
+        <p class="monthly">₹4,999 / month</p>
+      </div>
+
     </div>
-
-    <div class="pricing-card featured">
-      <div class="popular">Most Popular</div>
-      <h4>Multi-Doctor Clinic</h4>
-      <p class="price">₹19,999 Setup</p>
-      <p class="monthly">₹4,999 / month</p>
-    </div>
-
-    <div class="pricing-card">
-      <h4>High Volume Clinic</h4>
-      <p class="price">₹29,999 Setup</p>
-      <p class="monthly">₹7,999 / month</p>
-    </div>
-
   </div>
-</div>
 
-<!-- REAL ESTATE -->
-<div class="tab-content" id="realestate">
-  <div class="pricing-grid">
+  <!-- CLINIC -->
+  <div class="tab-content" id="clinic">
+    <div class="pricing-grid">
 
-    <div class="pricing-card">
-      <h4>Agent Starter</h4>
-      <p class="price">₹8,999 Setup</p>
-      <p class="monthly">₹2,499 / month</p>
+      <div class="pricing-card">
+        <h3>Basic Clinic</h3>
+        <p class="price">₹9,999 Setup</p>
+        <p class="monthly">₹2,499 / month</p>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="popular">Most Popular</div>
+        <h3>Multi-Doctor Clinic</h3>
+        <p class="price">₹19,999 Setup</p>
+        <p class="monthly">₹4,999 / month</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>High Volume Clinic</h3>
+        <p class="price">₹29,999 Setup</p>
+        <p class="monthly">₹7,999 / month</p>
+      </div>
+
     </div>
-
-    <div class="pricing-card">
-      <h4>Agent Growth</h4>
-      <p class="price">₹15,999 Setup</p>
-      <p class="monthly">₹3,999 / month</p>
-    </div>
-
-    <div class="pricing-card featured">
-      <div class="popular">Most Popular</div>
-      <h4>Agency Pro</h4>
-      <p class="price">₹29,999 Setup</p>
-      <p class="monthly">₹6,999 / month</p>
-    </div>
-
-    <div class="pricing-card">
-      <h4>Enterprise Realty</h4>
-      <p class="price">₹49,999 Setup</p>
-      <p class="monthly">₹12,999 / month</p>
-    </div>
-
   </div>
-</div>
 
-<div class="roi-section">
-  <h3>Expected ROI</h3>
-  <p>Clients typically see 2x–5x return within 90 days.</p>
-</div>
+  <!-- REAL ESTATE -->
+  <div class="tab-content" id="realestate">
+    <div class="pricing-grid">
 
-<div class="addons">
-  <h3>Optional Add-Ons</h3>
-  <div class="grid">
-    <div class="card">Advanced AI Chatbot – ₹4,999</div>
-    <div class="card">Custom Dashboard – ₹7,999</div>
-    <div class="card">Facebook Ads Integration – ₹5,999</div>
-    <div class="card">Premium WhatsApp API – ₹6,999</div>
+      <div class="pricing-card">
+        <h3>Agent Starter</h3>
+        <p class="price">₹8,999 Setup</p>
+        <p class="monthly">₹2,499 / month</p>
+      </div>
+
+      <div class="pricing-card featured">
+        <div class="popular">Most Popular</div>
+        <h3>Agency Pro</h3>
+        <p class="price">₹29,999 Setup</p>
+        <p class="monthly">₹6,999 / month</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Enterprise Realty</h3>
+        <p class="price">₹49,999 Setup</p>
+        <p class="monthly">₹12,999 / month</p>
+      </div>
+
+    </div>
   </div>
-</div>
 
 </section>
 
-<!-- CONTACT -->
+  <!-- ================= CONTACT ================= -->
+
 <section id="contact" class="contact-section">
+  <h2>Book Your Free Automation Strategy Call</h2>
 
-  <div class="contact-container">
+  <div class="contact-wrapper">
 
-    <div class="contact-left">
-      <h2>Book Your Free Automation Strategy Call</h2>
-      <p>Let’s design a system that brings you predictable leads and automated growth.</p>
-
+    <!-- FORM -->
+    <div class="contact-box">
       <form id="contactForm">
         <input type="text" name="name" placeholder="Your Name" required>
         <input type="email" name="email" placeholder="Your Email" required>
@@ -194,72 +160,34 @@
       </form>
     </div>
 
-    <div class="contact-right">
-      <div class="contact-card">
-        <h3>Contact Information</h3>
-        <p><strong>Email:</strong> mdnayabahmad441@gmail.com</p>
-        <p><strong>Phone:</strong> +91 8521297386</p>
-        <p><strong>Location:</strong> India</p>
-        <p>We typically respond within 24 hours.</p>
-      </div>
+    <!-- CONTACT INFO CARD -->
+    <div class="contact-card">
+      <h3>Contact Information</h3>
+      <p><strong>Email:</strong> mdnayabahmad441@gmail.com</p>
+      <p><strong>Phone:</strong> +91 8521297386</p>
+      <p><strong>Location:</strong> India</p>
     </div>
 
   </div>
-
 </section>
 
-<a href="#" class="whatsapp">Chat on WhatsApp</a>
 
-<!-- SCRIPTS -->
+
+<!-- ================= SCRIPTS ================= -->
+
 <script>
-
-// Tabs
 const tabs = document.querySelectorAll(".tab");
 const contents = document.querySelectorAll(".tab-content");
-const pricingSection = document.getElementById("pricing");
 
 tabs.forEach(tab => {
   tab.addEventListener("click", () => {
     tabs.forEach(t => t.classList.remove("active"));
     contents.forEach(c => c.classList.remove("active"));
-
     tab.classList.add("active");
     document.getElementById(tab.dataset.tab).classList.add("active");
-
-    pricingSection.scrollIntoView({ behavior: "smooth" });
   });
 });
-
-// Mobile Menu
-const menuToggle = document.getElementById("menuToggle");
-const mobileMenu = document.getElementById("mobileMenu");
-menuToggle.addEventListener("click", () => {
-  mobileMenu.classList.toggle("active");
-});
-
-// Google Sheet Submit
-document.getElementById("contactForm").addEventListener("submit", function(e) {
-  e.preventDefault();
-
-  const form = this;
-  const data = {
-    name: form.name.value,
-    email: form.email.value,
-    phone: form.phone.value,
-    message: form.message.value
-  };
-
-  alert("Submitted Successfully 🚀");
-  form.reset();
-
-  fetch("https://script.google.com/macros/s/AKfycbySdB3gI5_QQa91vFKlvy9gokOhonN4srzYDASe2g1I_ILt0aOEjsxRqac-4expxkm6/exec", {
-    method: "POST",
-    body: JSON.stringify(data)
-  }).catch(err => console.log(err));
-});
-
 </script>
 
 </body>
 </html>
-
