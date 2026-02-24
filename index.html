@@ -11,7 +11,7 @@
 
 <body>
 
-<!-- ================= HEADER ================= -->
+<div class="particles"></div>
 
 <header>
   <div class="nav">
@@ -19,27 +19,21 @@
       <img src="logo.png" alt="Logo">
       <span>NaySha Automation</span>
     </div>
-
     <div class="nav-links">
       <a href="#services">Services</a>
       <a href="#pricing">Pricing</a>
-      <a href="#contact">Contact</a>
       <a href="#contact" class="nav-btn">Get Started</a>
     </div>
   </div>
 </header>
 
-<!-- ================= HERO ================= -->
-
-<section class="hero">
+<section class="hero fade-in">
   <h1>Automate Your Business Growth.</h1>
   <p>Complete automation systems for Schools, Clinics & Real Estate businesses.</p>
-  <a href="#contact" class="hero-btn">Book Free Strategy Call</a>
+  <a href="#contact" class="hero-btn shimmer">Book Free Strategy Call</a>
 </section>
 
-<!-- ================= SERVICES ================= -->
-
-<section id="services" class="section">
+<section id="services" class="section fade-in">
   <h2>Our Automation Services</h2>
   <div class="grid">
     <div class="card">Lead Generation Systems</div>
@@ -51,141 +45,99 @@
   </div>
 </section>
 
-<!-- ================= PRICING ================= -->
-
-<section id="pricing" class="section">
+<section id="pricing" class="section fade-in">
   <h2>Industry-Based Automation Plans</h2>
 
-  <div class="pricing-tabs">
-    <button class="tab active" data-tab="school">School</button>
-    <button class="tab" data-tab="clinic">Clinic</button>
-    <button class="tab" data-tab="realestate">Real Estate</button>
-  </div>
+  <div class="pricing-grid">
 
-  <!-- SCHOOL -->
-  <div class="tab-content active" id="school">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <h3>Starter School System</h3>
-        <p class="price">₹6,999 Setup</p>
-        <p class="monthly">₹1,499 / month</p>
-      </div>
-
-      <div class="pricing-card featured">
-        <div class="popular">Most Popular</div>
-        <h3>Growth School System</h3>
-        <p class="price">₹11,999 Setup</p>
-        <p class="monthly">₹2,999 / month</p>
-      </div>
-
-      <div class="pricing-card">
-        <h3>Elite School Automation</h3>
-        <p class="price">₹14,999 Setup</p>
-        <p class="monthly">₹4,999 / month</p>
-      </div>
-
+    <div class="pricing-card">
+      <h3>Starter School</h3>
+      <p class="price" data-price="6999">₹0</p>
+      <p class="monthly">₹1,499 / month</p>
     </div>
-  </div>
 
-  <!-- CLINIC -->
-  <div class="tab-content" id="clinic">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <h3>Basic Clinic</h3>
-        <p class="price">₹9,999 Setup</p>
-        <p class="monthly">₹2,499 / month</p>
-      </div>
-
-      <div class="pricing-card featured">
-        <div class="popular">Most Popular</div>
-        <h3>Multi-Doctor Clinic</h3>
-        <p class="price">₹19,999 Setup</p>
-        <p class="monthly">₹4,999 / month</p>
-      </div>
-
-      <div class="pricing-card">
-        <h3>High Volume Clinic</h3>
-        <p class="price">₹29,999 Setup</p>
-        <p class="monthly">₹7,999 / month</p>
-      </div>
-
+    <div class="pricing-card featured">
+      <div class="popular">Most Popular</div>
+      <h3>Growth School</h3>
+      <p class="price" data-price="11999">₹0</p>
+      <p class="monthly">₹2,999 / month</p>
     </div>
-  </div>
 
-  <!-- REAL ESTATE -->
-  <div class="tab-content" id="realestate">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <h3>Agent Starter</h3>
-        <p class="price">₹8,999 Setup</p>
-        <p class="monthly">₹2,499 / month</p>
-      </div>
-
-      <div class="pricing-card featured">
-        <div class="popular">Most Popular</div>
-        <h3>Agency Pro</h3>
-        <p class="price">₹29,999 Setup</p>
-        <p class="monthly">₹6,999 / month</p>
-      </div>
-
-      <div class="pricing-card">
-        <h3>Enterprise Realty</h3>
-        <p class="price">₹49,999 Setup</p>
-        <p class="monthly">₹12,999 / month</p>
-      </div>
-
+    <div class="pricing-card">
+      <h3>Elite School</h3>
+      <p class="price" data-price="14999">₹0</p>
+      <p class="monthly">₹4,999 / month</p>
     </div>
-  </div>
 
+  </div>
 </section>
 
-  <!-- ================= CONTACT ================= -->
-
-<section id="contact" class="contact-section">
+<section id="contact" class="contact-section fade-in">
   <h2>Book Your Free Automation Strategy Call</h2>
 
   <div class="contact-wrapper">
 
-    <!-- FORM -->
     <div class="contact-box">
-      <form id="contactForm">
-        <input type="text" name="name" placeholder="Your Name" required>
-        <input type="email" name="email" placeholder="Your Email" required>
-        <input type="text" name="phone" placeholder="Your Phone Number">
-        <textarea name="message" placeholder="Tell us about your business"></textarea>
-        <button type="submit">Submit</button>
+      <form>
+        <input type="text" placeholder="Your Name" required>
+        <input type="email" placeholder="Your Email" required>
+        <input type="text" placeholder="Your Phone Number">
+        <textarea placeholder="Tell us about your business"></textarea>
+        <button type="submit" class="shimmer">Submit</button>
       </form>
     </div>
 
-    <!-- CONTACT INFO CARD -->
     <div class="contact-card">
       <h3>Contact Information</h3>
-      <p><strong>Email:</strong> mdnayabahmad441@gmail.com</p>
-      <p><strong>Phone:</strong> +91 8521297386</p>
-      <p><strong>Location:</strong> India</p>
+      <p>Email: mdnayabahmad441@gmail.com</p>
+      <p>Phone: +91 8521297386</p>
+      <p>Location: India</p>
     </div>
 
   </div>
 </section>
 
-
-
-<!-- ================= SCRIPTS ================= -->
+<a href="#" class="whatsapp shimmer">Chat on WhatsApp</a>
 
 <script>
-const tabs = document.querySelectorAll(".tab");
-const contents = document.querySelectorAll(".tab-content");
+/* Scroll Fade In */
+const faders = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+entry.target.classList.add('show');
+}
+});
+},{threshold:0.2});
+faders.forEach(el=>observer.observe(el));
 
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(t => t.classList.remove("active"));
-    contents.forEach(c => c.classList.remove("active"));
-    tab.classList.add("active");
-    document.getElementById(tab.dataset.tab).classList.add("active");
-  });
+/* Price Counter */
+const prices = document.querySelectorAll('.price');
+const priceObserver = new IntersectionObserver(entries=>{
+entries.forEach(entry=>{
+if(entry.isIntersecting){
+let el = entry.target;
+let target = +el.dataset.price;
+let count = 0;
+let increment = target/100;
+let interval = setInterval(()=>{
+count += increment;
+if(count >= target){
+count = target;
+clearInterval(interval);
+}
+el.textContent = "₹" + Math.floor(count).toLocaleString();
+},10);
+priceObserver.unobserve(el);
+}
+});
+},{threshold:0.6});
+prices.forEach(p=>priceObserver.observe(p));
+
+/* Parallax Glow */
+document.addEventListener('mousemove',e=>{
+document.body.style.setProperty('--x', e.clientX + 'px');
+document.body.style.setProperty('--y', e.clientY + 'px');
 });
 </script>
 
