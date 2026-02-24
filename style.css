@@ -357,3 +357,26 @@ form button {
   }
 
 }
+@media (max-width: 768px) {
+
+  /* Minimal Header Layout */
+  .nav a:not(.nav-btn) {
+    display: none;
+  }
+
+  header {
+    padding: 16px 20px;
+  }
+
+  .logo span {
+    font-size: 16px;
+    font-weight: 600;
+  }
+
+  .nav-btn {
+    padding: 6px 14px;
+    font-size: 13px;
+    border-radius: 18px;
+  }
+
+}
