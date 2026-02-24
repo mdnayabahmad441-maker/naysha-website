@@ -403,3 +403,30 @@ form button {
   }
 
 }
+/* ============================= */
+/* SMART WHATSAPP VISIBILITY FIX */
+/* ============================= */
+
+/* Default hidden */
+.whatsapp {
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(20px);
+  transition: all 0.3s ease;
+}
+
+/* When active */
+.whatsapp.show {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+/* Desktop always visible */
+@media (min-width: 769px) {
+  .whatsapp {
+    opacity: 1;
+    visibility: visible;
+    transform: translateY(0);
+  }
+}
