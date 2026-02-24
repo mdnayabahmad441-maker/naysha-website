@@ -4,36 +4,32 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>NaySha Automation</title>
-
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
-<div class="particles"></div>
-
 <header>
-  <div class="nav">
-    <div class="logo">
-      <img src="logo.png" alt="Logo">
-      <span>NaySha Automation</span>
-    </div>
-    <div class="nav-links">
-      <a href="#services">Services</a>
-      <a href="#pricing">Pricing</a>
-      <a href="#contact" class="nav-btn">Get Started</a>
-    </div>
+  <div class="logo">
+    <img src="logo.png" alt="Logo">
+    <span>NaySha Automation</span>
   </div>
+
+  <nav class="nav">
+    <a href="#services">Services</a>
+    <a href="#pricing">Pricing</a>
+    <a href="#contact" class="nav-btn">Get Started</a>
+  </nav>
 </header>
 
-<section class="hero fade-in">
+<section class="hero">
   <h1>Automate Your Business Growth.</h1>
   <p>Complete automation systems for Schools, Clinics & Real Estate businesses.</p>
-  <a href="#contact" class="hero-btn shimmer">Book Free Strategy Call</a>
+  <a href="#contact" class="hero-btn">Book Free Strategy Call</a>
 </section>
 
-<section id="services" class="section fade-in">
+<section id="services" class="section">
   <h2>Our Automation Services</h2>
   <div class="grid">
     <div class="card">Lead Generation Systems</div>
@@ -45,185 +41,117 @@
   </div>
 </section>
 
-<!-- PRICING -->
 <section id="pricing" class="pricing">
 
   <h2>Industry-Based Automation Plans</h2>
 
-  <!-- Tabs -->
   <div class="pricing-tabs">
-    <button class="active" onclick="showPricing('school', event)">School</button>
-    <button onclick="showPricing('clinic', event)">Clinic</button>
-    <button onclick="showPricing('realestate', event)">Real Estate</button>
+    <button class="active" data-tab="school">School</button>
+    <button data-tab="clinic">Clinic</button>
+    <button data-tab="realestate">Real Estate</button>
   </div>
 
-  <!-- SCHOOL -->
-  <div id="school" class="pricing-content active">
+  <div class="pricing-content active" id="school">
     <div class="pricing-grid">
-
       <div class="pricing-card">
         <h3>Starter School</h3>
         <div class="price">₹6,999</div>
-        <p class="monthly">₹1,499 / month</p>
+        <p>₹1,499 / month</p>
       </div>
-
       <div class="pricing-card popular">
         <div class="badge">Most Popular</div>
         <h3>Growth School</h3>
         <div class="price">₹11,999</div>
-        <p class="monthly">₹2,999 / month</p>
+        <p>₹2,999 / month</p>
       </div>
-
       <div class="pricing-card">
         <h3>Elite School</h3>
         <div class="price">₹14,999</div>
-        <p class="monthly">₹4,999 / month</p>
+        <p>₹4,999 / month</p>
       </div>
-
     </div>
   </div>
 
-  <!-- CLINIC -->
-  <div id="clinic" class="pricing-content">
+  <div class="pricing-content" id="clinic">
     <div class="pricing-grid">
-
       <div class="pricing-card">
         <h3>Solo Doctor</h3>
         <div class="price">₹9,999</div>
-        <p class="monthly">₹2,499 / month</p>
+        <p>₹2,499 / month</p>
       </div>
-
       <div class="pricing-card popular">
         <div class="badge">Most Popular</div>
         <h3>Multi-Doctor Clinic</h3>
         <div class="price">₹19,999</div>
-        <p class="monthly">₹4,999 / month</p>
+        <p>₹4,999 / month</p>
       </div>
-
       <div class="pricing-card">
         <h3>High Volume Clinic</h3>
         <div class="price">₹29,999</div>
-        <p class="monthly">₹7,999 / month</p>
+        <p>₹7,999 / month</p>
       </div>
-
     </div>
   </div>
 
-  <!-- REAL ESTATE -->
-  <div id="realestate" class="pricing-content">
+  <div class="pricing-content" id="realestate">
     <div class="pricing-grid">
-
       <div class="pricing-card">
         <h3>Agent Starter</h3>
         <div class="price">₹8,999</div>
-        <p class="monthly">₹2,499 / month</p>
+        <p>₹2,499 / month</p>
       </div>
-
       <div class="pricing-card">
         <h3>Agent Growth</h3>
         <div class="price">₹15,999</div>
-        <p class="monthly">₹3,999 / month</p>
+        <p>₹3,999 / month</p>
       </div>
-
       <div class="pricing-card popular">
         <div class="badge">Most Popular</div>
         <h3>Agency Pro</h3>
         <div class="price">₹29,999</div>
-        <p class="monthly">₹6,999 / month</p>
+        <p>₹6,999 / month</p>
       </div>
-
     </div>
   </div>
 
 </section>
 
-<section id="contact" class="contact-section fade-in">
+<section id="contact" class="contact">
   <h2>Book Your Free Automation Strategy Call</h2>
-
   <div class="contact-wrapper">
-
-    <div class="contact-box">
-      <form>
-        <input type="text" placeholder="Your Name" required>
-        <input type="email" placeholder="Your Email" required>
-        <input type="text" placeholder="Your Phone Number">
-        <textarea placeholder="Tell us about your business"></textarea>
-        <button type="submit" class="shimmer">Submit</button>
-      </form>
-    </div>
+    <form>
+      <input type="text" placeholder="Your Name">
+      <input type="email" placeholder="Your Email">
+      <input type="text" placeholder="Your Phone Number">
+      <textarea placeholder="Tell us about your business"></textarea>
+      <button type="submit">Submit</button>
+    </form>
 
     <div class="contact-card">
       <h3>Contact Information</h3>
       <p>Email: mdnayabahmad441@gmail.com</p>
       <p>Phone: +91 8521297386</p>
-      <p>Location: India</p>
+      <p>India</p>
     </div>
-
   </div>
 </section>
 
-<a href="#" class="whatsapp shimmer">Chat on WhatsApp</a>
+<a href="#" class="whatsapp">Chat on WhatsApp</a>
 
 <script>
-/* Scroll Fade In */
-const faders = document.querySelectorAll('.fade-in');
-const observer = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-entry.target.classList.add('show');
-}
-});
-},{threshold:0.2});
-faders.forEach(el=>observer.observe(el));
+const tabs = document.querySelectorAll(".pricing-tabs button");
+const contents = document.querySelectorAll(".pricing-content");
 
-/* Price Counter */
-const prices = document.querySelectorAll('.price');
-const priceObserver = new IntersectionObserver(entries=>{
-entries.forEach(entry=>{
-if(entry.isIntersecting){
-let el = entry.target;
-let target = +el.dataset.price;
-let count = 0;
-let increment = target/100;
-let interval = setInterval(()=>{
-count += increment;
-if(count >= target){
-count = target;
-clearInterval(interval);
-}
-el.textContent = "₹" + Math.floor(count).toLocaleString();
-},10);
-priceObserver.unobserve(el);
-}
-});
-},{threshold:0.6});
-prices.forEach(p=>priceObserver.observe(p));
+tabs.forEach(tab => {
+  tab.addEventListener("click", () => {
+    tabs.forEach(btn => btn.classList.remove("active"));
+    tab.classList.add("active");
 
-/* Parallax Glow */
-document.addEventListener('mousemove',e=>{
-document.body.style.setProperty('--x', e.clientX + 'px');
-document.body.style.setProperty('--y', e.clientY + 'px');
+    contents.forEach(content => content.classList.remove("active"));
+    document.getElementById(tab.dataset.tab).classList.add("active");
+  });
 });
 </script>
-<script>
-function showPricing(type, event) {
 
-  // Hide all pricing contents
-  document.querySelectorAll('.pricing-content').forEach(el => {
-    el.classList.remove('active');
-  });
-
-  // Show selected
-  document.getElementById(type).classList.add('active');
-
-  // Update tab active state
-  document.querySelectorAll('.pricing-tabs button').forEach(btn => {
-    btn.classList.remove('active');
-  });
-
-  event.target.classList.add('active');
-}
-</script>
 </body>
 </html>
-
