@@ -477,5 +477,18 @@ form button {
 .addons {
   margin-top: 80px;
 }
+/* ================= SPACING FIX ================= */
+
+#pricing {
+  padding-bottom: 120px;
+}
+
+.addons {
+  margin-bottom: 80px;
+}
+
+.addons .grid {
+  margin-top: 30px;
+}
 
 
