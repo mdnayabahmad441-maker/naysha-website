@@ -45,31 +45,96 @@
   </div>
 </section>
 
-<section id="pricing" class="section fade-in">
+<!-- PRICING -->
+<section id="pricing" class="pricing">
+
   <h2>Industry-Based Automation Plans</h2>
 
-  <div class="pricing-grid">
-
-    <div class="pricing-card">
-      <h3>Starter School</h3>
-      <p class="price" data-price="6999">₹0</p>
-      <p class="monthly">₹1,499 / month</p>
-    </div>
-
-    <div class="pricing-card featured">
-      <div class="popular">Most Popular</div>
-      <h3>Growth School</h3>
-      <p class="price" data-price="11999">₹0</p>
-      <p class="monthly">₹2,999 / month</p>
-    </div>
-
-    <div class="pricing-card">
-      <h3>Elite School</h3>
-      <p class="price" data-price="14999">₹0</p>
-      <p class="monthly">₹4,999 / month</p>
-    </div>
-
+  <!-- Tabs -->
+  <div class="pricing-tabs">
+    <button class="active" onclick="showPricing('school', event)">School</button>
+    <button onclick="showPricing('clinic', event)">Clinic</button>
+    <button onclick="showPricing('realestate', event)">Real Estate</button>
   </div>
+
+  <!-- SCHOOL -->
+  <div id="school" class="pricing-content active">
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>Starter School</h3>
+        <div class="price">₹6,999</div>
+        <p class="monthly">₹1,499 / month</p>
+      </div>
+
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Growth School</h3>
+        <div class="price">₹11,999</div>
+        <p class="monthly">₹2,999 / month</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Elite School</h3>
+        <div class="price">₹14,999</div>
+        <p class="monthly">₹4,999 / month</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- CLINIC -->
+  <div id="clinic" class="pricing-content">
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>Solo Doctor</h3>
+        <div class="price">₹9,999</div>
+        <p class="monthly">₹2,499 / month</p>
+      </div>
+
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Multi-Doctor Clinic</h3>
+        <div class="price">₹19,999</div>
+        <p class="monthly">₹4,999 / month</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>High Volume Clinic</h3>
+        <div class="price">₹29,999</div>
+        <p class="monthly">₹7,999 / month</p>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- REAL ESTATE -->
+  <div id="realestate" class="pricing-content">
+    <div class="pricing-grid">
+
+      <div class="pricing-card">
+        <h3>Agent Starter</h3>
+        <div class="price">₹8,999</div>
+        <p class="monthly">₹2,499 / month</p>
+      </div>
+
+      <div class="pricing-card">
+        <h3>Agent Growth</h3>
+        <div class="price">₹15,999</div>
+        <p class="monthly">₹3,999 / month</p>
+      </div>
+
+      <div class="pricing-card popular">
+        <div class="badge">Most Popular</div>
+        <h3>Agency Pro</h3>
+        <div class="price">₹29,999</div>
+        <p class="monthly">₹6,999 / month</p>
+      </div>
+
+    </div>
+  </div>
+
 </section>
 
 <section id="contact" class="contact-section fade-in">
@@ -140,6 +205,25 @@ document.body.style.setProperty('--x', e.clientX + 'px');
 document.body.style.setProperty('--y', e.clientY + 'px');
 });
 </script>
+<script>
+function showPricing(type, event) {
 
+  // Hide all pricing contents
+  document.querySelectorAll('.pricing-content').forEach(el => {
+    el.classList.remove('active');
+  });
+
+  // Show selected
+  document.getElementById(type).classList.add('active');
+
+  // Update tab active state
+  document.querySelectorAll('.pricing-tabs button').forEach(btn => {
+    btn.classList.remove('active');
+  });
+
+  event.target.classList.add('active');
+}
+</script>
 </body>
 </html>
+
