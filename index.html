@@ -25,8 +25,9 @@
 
 <section class="hero">
   <h1>Automate Your Business Growth.</h1>
-  <p>Complete automation systems for Schools, Clinics & Real Estate businesses.</p>
-  <a href="#contact" class="hero-btn">Book Free Strategy Call</a>
+  <p>Complete automation systems for Schools, Clinics & Real Estate businesses in India.</p>
+  <p class="authority-line">We don’t build websites. We build revenue systems.</p>
+  <a href="#contact" class="hero-btn">Get My Free Automation Blueprint</a>
 </section>
 
 <section id="services" class="section">
@@ -38,6 +39,24 @@
     <div class="card">WhatsApp Automation</div>
     <div class="card">Email Automation</div>
     <div class="card">Full Business Automation</div>
+  </div>
+</section>
+
+<section class="section">
+  <h2>Proven Growth Results</h2>
+  <div class="grid">
+    <div class="card">
+      <h3>2x–5x</h3>
+      <p>Increase in Qualified Leads within 90 Days</p>
+    </div>
+    <div class="card">
+      <h3>40%</h3>
+      <p>Faster Response Time using AI & WhatsApp Automation</p>
+    </div>
+    <div class="card">
+      <h3>30%</h3>
+      <p>Higher Conversion Rate through Automated Follow-ups</p>
+    </div>
   </div>
 </section>
 
@@ -124,7 +143,7 @@
       <input type="email" placeholder="Your Email">
       <input type="text" placeholder="Your Phone Number">
       <textarea placeholder="Tell us about your business"></textarea>
-      <button type="submit">Submit</button>
+      <button type="submit">Start My Automation System</button>
     </form>
 
     <div class="contact-card">
@@ -136,7 +155,7 @@
   </div>
 </section>
 
-           ===========<a href="#" class="whatsapp">Chat on WhatsApp</a>==============
+<a href="#" class="whatsapp">Chat on WhatsApp</a>
 
 <script>
 const tabs = document.querySelectorAll(".pricing-tabs button");
@@ -152,23 +171,8 @@ tabs.forEach(tab => {
   });
 });
 </script>
+
 <script>
-const tabs = document.querySelectorAll(".pricing-tabs button");
-const contents = document.querySelectorAll(".pricing-content");
-
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(btn => btn.classList.remove("active"));
-    tab.classList.add("active");
-
-    contents.forEach(content => content.classList.remove("active"));
-    document.getElementById(tab.dataset.tab).classList.add("active");
-  });
-});
-</script>
-  <script>
-
-/* Scroll Reveal */
 const revealElements = document.querySelectorAll(
   ".hero, .section, .pricing, .contact"
 );
@@ -186,7 +190,6 @@ revealElements.forEach(el => {
   observer.observe(el);
 });
 
-/* Custom Cursor */
 const cursor = document.createElement("div");
 cursor.classList.add("cursor-glow");
 document.body.appendChild(cursor);
@@ -195,11 +198,7 @@ document.addEventListener("mousemove", e => {
   cursor.style.left = e.clientX + "px";
   cursor.style.top = e.clientY + "px";
 });
-
 </script>
+
 </body>
 </html>
-
-
-
-
