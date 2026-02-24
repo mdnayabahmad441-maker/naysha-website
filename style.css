@@ -403,50 +403,65 @@ form button {
   margin-bottom: 10px;
   opacity: 0.85;
 }
-/* PRICING TABS */
+
+/* ================= PRICING TABS PREMIUM ================= */
+
 .pricing-tabs {
   display: flex;
   justify-content: center;
   gap: 20px;
-  margin-bottom: 50px;
+  margin: 50px 0 70px;
 }
 
 .tab {
-  padding: 10px 20px;
-  border-radius: 25px;
-  background: rgba(255,255,255,0.08);
-  border: none;
-  cursor: pointer;
+  padding: 14px 28px;
+  border-radius: 40px;
+  border: 1px solid rgba(255,255,255,0.15);
+  background: rgba(255,255,255,0.05);
+  backdrop-filter: blur(15px);
   color: white;
-  transition: 0.3s;
+  font-weight: 600;
+  font-size: 15px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.tab:hover {
+  background: rgba(124,92,255,0.2);
+  border: 1px solid rgba(124,92,255,0.5);
 }
 
 .tab.active {
   background: linear-gradient(90deg, #7c5cff, #4bdfff);
+  border: none;
+  box-shadow: 0 0 25px rgba(124,92,255,0.6);
+  transform: scale(1.05);
 }
 
-.tab-content {
-  display: none;
-  animation: fadeIn 0.5s ease forwards;
+/* Better spacing for pricing section */
+#pricing h2 {
+  margin-bottom: 10px;
 }
 
-.tab-content.active {
-  display: block;
+.pricing-tabs {
+  margin-top: 30px;
 }
 
-@keyframes fadeIn {
-  from { opacity: 0; transform: translateY(20px);}
-  to { opacity: 1; transform: translateY(0);}
-}
 
 /* MOST POPULAR BADGE */
 .popular {
-  background: #7c5cff;
-  padding: 5px 10px;
-  border-radius: 12px;
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: linear-gradient(90deg, #7c5cff, #4bdfff);
+  padding: 6px 12px;
   font-size: 12px;
-  margin-bottom: 10px;
-  display: inline-block;
+  border-radius: 20px;
+  font-weight: 600;
+}
+
+.pricing-card {
+  position: relative;
 }
 
 /* ROI SECTION */
@@ -461,3 +476,4 @@ form button {
 .addons {
   margin-top: 80px;
 }
+
