@@ -1,22 +1,18 @@
 *{margin:0;padding:0;box-sizing:border-box}
 body{
-font-family:'Inter',sans-serif;
-color:white;
-overflow-x:hidden;
-background:
-radial-gradient(circle at var(--x,50%) var(--y,50%),rgba(124,92,255,0.25),transparent 40%),
-radial-gradient(circle at 80% 70%,rgba(75,223,255,0.2),transparent 40%),
-linear-gradient(-45deg,#0f172a,#111827,#0b1120,#0f172a);
-background-size:400% 400%;
-animation:gradientShift 15s ease infinite;
-}
+  font-family:'Inter',sans-serif;
+  color:white;
+  overflow-x:hidden;
 
-@keyframes gradientShift{
-0%{background-position:0% 50%}
-50%{background-position:100% 50%}
-100%{background-position:0% 50%}
-}
+  background:
+    radial-gradient(circle at 20% 30%, rgba(124,92,255,0.45), transparent 45%),
+    radial-gradient(circle at 80% 70%, rgba(75,223,255,0.35), transparent 45%),
+    radial-gradient(circle at var(--x,50%) var(--y,50%), rgba(124,92,255,0.35), transparent 40%),
+    linear-gradient(-45deg,#0f172a,#111827,#0b1120,#0f172a);
 
+  background-size: 400% 400%;
+  animation: gradientShift 18s ease infinite;
+}
 /* Floating particles */
 .particles::before{
 content:"";
@@ -197,3 +193,4 @@ text-decoration:none;
 .pricing-grid{grid-template-columns:1fr}
 .hero h1{font-size:36px}
 }
+
