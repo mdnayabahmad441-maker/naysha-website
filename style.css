@@ -1,7 +1,3 @@
-/* ============================= */
-/* GLOBAL RESET */
-/* ============================= */
-
 * {
   margin: 0;
   padding: 0;
@@ -10,14 +6,63 @@
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, #1d1d3a, #050816 60%);
+  background: #050816;
   color: #ffffff;
   overflow-x: hidden;
+  position: relative;
 }
 
-/* ============================= */
+/* Deep Premium Glow Layers */
+body::before {
+  content: "";
+  position: fixed;
+  top: -20%;
+  left: -20%;
+  width: 140%;
+  height: 140%;
+  background:
+    radial-gradient(circle at 25% 30%, rgba(123,92,255,0.35), transparent 40%),
+    radial-gradient(circle at 75% 20%, rgba(76,201,240,0.25), transparent 45%),
+    radial-gradient(circle at 50% 80%, rgba(123,92,255,0.20), transparent 50%);
+  z-index: -2;
+  filter: blur(120px);
+}
+
+body::after {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(circle at center, transparent 40%, #050816 90%);
+  z-index: -1;
+}
+
+/* Floating Glow Orbs */
+
+.glow-orb {
+  position: fixed;
+  border-radius: 50%;
+  filter: blur(140px);
+  z-index: -3;
+  pointer-events: none;
+}
+
+.glow-orb.one {
+  width: 500px;
+  height: 500px;
+  background: rgba(123,92,255,0.25);
+  top: -100px;
+  left: -150px;
+}
+
+.glow-orb.two {
+  width: 400px;
+  height: 400px;
+  background: rgba(76,201,240,0.18);
+  bottom: -120px;
+  right: -120px;
+}
+
 /* HEADER */
-/* ============================= */
 
 header {
   display: flex;
@@ -61,9 +106,7 @@ header {
   color: #fff !important;
 }
 
-/* ============================= */
 /* HERO */
-/* ============================= */
 
 .hero {
   text-align: center;
@@ -74,6 +117,7 @@ header {
   font-size: 48px;
   margin-bottom: 20px;
   font-weight: 700;
+  text-shadow: 0 0 40px rgba(123,92,255,0.6);
 }
 
 .hero p {
@@ -98,9 +142,7 @@ header {
   transition: 0.3s;
 }
 
-/* ============================= */
-/* SECTION */
-/* ============================= */
+/* SECTIONS */
 
 .section {
   padding: 80px 8%;
@@ -121,9 +163,10 @@ header {
 .card {
   padding: 40px;
   border-radius: 20px;
-  background: rgba(255,255,255,0.05);
+  background: rgba(255,255,255,0.04);
   backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 0 40px rgba(123,92,255,0.08);
   transition: 0.3s ease;
 }
 
@@ -132,136 +175,7 @@ header {
   border: 1px solid #7b5cff;
 }
 
-/* ============================= */
-/* PRICING */
-/* ============================= */
-
-.pricing {
-  padding: 80px 8%;
-  text-align: center;
-}
-
-.pricing-tabs {
-  margin-bottom: 40px;
-}
-
-.pricing-tabs button {
-  padding: 10px 22px;
-  border-radius: 30px;
-  border: none;
-  margin: 0 10px;
-  background: rgba(255,255,255,0.05);
-  color: #ccc;
-  cursor: pointer;
-  transition: 0.3s;
-}
-
-.pricing-tabs button.active {
-  background: linear-gradient(90deg, #7b5cff, #4cc9f0);
-  color: #fff;
-}
-
-.pricing-content {
-  display: none;
-}
-
-.pricing-content.active {
-  display: block;
-}
-
-.pricing-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 30px;
-}
-
-.pricing-card {
-  padding: 40px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
-  transition: 0.3s;
-  position: relative;
-}
-
-.pricing-card:hover {
-  transform: translateY(-6px);
-  border: 1px solid #7b5cff;
-}
-
-.pricing-card.popular {
-  border: 1px solid #7b5cff;
-}
-
-.badge {
-  position: absolute;
-  top: -12px;
-  right: 20px;
-  background: #7b5cff;
-  padding: 5px 12px;
-  border-radius: 20px;
-  font-size: 12px;
-}
-
-.price {
-  font-size: 26px;
-  font-weight: 700;
-  margin: 15px 0;
-}
-
-/* ============================= */
-/* CONTACT */
-/* ============================= */
-
-.contact {
-  padding: 80px 8%;
-  text-align: center;
-}
-
-.contact-wrapper {
-  display: flex;
-  justify-content: center;
-  gap: 60px;
-  margin-top: 40px;
-}
-
-form {
-  display: flex;
-  flex-direction: column;
-  gap: 15px;
-}
-
-form input,
-form textarea {
-  padding: 14px;
-  border-radius: 10px;
-  border: none;
-  background: rgba(255,255,255,0.05);
-  color: #fff;
-}
-
-form button {
-  padding: 14px;
-  border-radius: 30px;
-  border: none;
-  background: linear-gradient(90deg, #7b5cff, #4cc9f0);
-  color: #fff;
-  font-weight: 600;
-  cursor: pointer;
-}
-
-.contact-card {
-  padding: 40px;
-  border-radius: 20px;
-  background: rgba(255,255,255,0.05);
-  backdrop-filter: blur(20px);
-  border: 1px solid rgba(255,255,255,0.08);
-}
-
-/* ============================= */
 /* WHATSAPP */
-/* ============================= */
 
 .whatsapp {
   position: fixed;
@@ -274,159 +188,4 @@ form button {
   text-decoration: none;
   font-weight: 600;
   z-index: 9999;
-}
-
-/* ============================= */
-/* MOBILE HIGH-PERFORMANCE MODE */
-/* ============================= */
-
-@media (max-width: 768px) {
-
-  .hero {
-    padding: 80px 20px 60px;
-  }
-
-  .hero h1 {
-    font-size: 32px;
-    line-height: 1.3;
-  }
-
-  .section,
-  .pricing,
-  .contact {
-    padding: 60px 20px;
-  }
-
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .pricing-grid {
-    grid-template-columns: 1fr;
-  }
-
-  .contact-wrapper {
-    flex-direction: column;
-    gap: 50px;
-  }
-
-  .contact-card {
-    text-align: center;
-  }
-
-  .whatsapp {
-    bottom: 80px;
-    right: 20px;
-  }
-
-  /* Studio Glow Boost */
-  body {
-    background: radial-gradient(circle at 50% 10%, #2a1f6f, #050816 70%);
-  }
-
-  .hero h1 {
-    text-shadow: 0 0 25px rgba(123,92,255,0.6);
-  }
-
-  .pricing-card:hover,
-  .card:hover {
-    transform: translateY(-4px);
-  }
-}
-@media (max-width: 768px) {
-
-  header {
-    padding: 18px 20px;
-  }
-
-  .nav {
-    display: flex;
-    align-items: center;
-    gap: 12px;
-  }
-
-  .nav a {
-    margin-left: 0;
-    font-size: 14px;
-  }
-
-  .nav-btn {
-    padding: 6px 14px;
-    font-size: 13px;
-    border-radius: 18px;
-  }
-
-}
-@media (max-width: 768px) {
-
-  /* Minimal Header Layout */
-  .nav a:not(.nav-btn) {
-    display: none;
-  }
-
-  header {
-    padding: 16px 20px;
-  }
-
-  .logo span {
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  .nav-btn {
-    padding: 6px 14px;
-    font-size: 13px;
-    border-radius: 18px;
-  }
-
-}
-@media (max-width: 768px) {
-
-  /* Minimal Header Layout */
-  .nav a:not(.nav-btn) {
-    display: none;
-  }
-
-  header {
-    padding: 16px 20px;
-  }
-
-  .logo span {
-    font-size: 16px;
-    font-weight: 600;
-  }
-
-  .nav-btn {
-    padding: 6px 14px;
-    font-size: 13px;
-    border-radius: 18px;
-  }
-
-}
-/* ============================= */
-/* SMART WHATSAPP VISIBILITY FIX */
-/* ============================= */
-
-/* Default hidden */
-.whatsapp {
-  opacity: 0;
-  visibility: hidden;
-  transform: translateY(20px);
-  transition: all 0.3s ease;
-}
-
-/* When active */
-.whatsapp.show {
-  opacity: 1;
-  visibility: visible;
-  transform: translateY(0);
-}
-
-/* Desktop always visible */
-@media (min-width: 769px) {
-  .whatsapp {
-    opacity: 1;
-    visibility: visible;
-    transform: translateY(0);
-  }
 }
