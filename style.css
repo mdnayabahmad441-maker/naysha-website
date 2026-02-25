@@ -10,7 +10,10 @@
 }
 
 body {
-  background: radial-gradient(circle at 20% 20%, #1d1d3a, #050816 60%);
+  background:
+    radial-gradient(circle at 18% 38%, #3a2a8f 0%, transparent 45%),
+    radial-gradient(circle at 85% 15%, #0e2a5f 0%, transparent 40%),
+    #050816;
   color: #ffffff;
   overflow-x: hidden;
 }
@@ -333,3 +336,4 @@ form button {
     transform: translateY(-4px);
   }
 }
+
