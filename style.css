@@ -5,6 +5,10 @@
   font-family: 'Inter', sans-serif;
 }
 
+/* ============================= */
+/* PREMIUM BACKGROUND */
+/* ============================= */
+
 body {
   background: #070b1f;
   color: #ffffff;
@@ -12,14 +16,12 @@ body {
   position: relative;
 }
 
-/* ===== PREMIUM BACKGROUND ===== */
-
 body::before {
   content: "";
   position: fixed;
   inset: 0;
   background:
-    radial-gradient(circle at 15% 40%, rgba(123,92,255,0.35), transparent 45%),
+    radial-gradient(circle at 18% 40%, rgba(123,92,255,0.35), transparent 45%),
     radial-gradient(circle at 85% 20%, rgba(76,201,240,0.20), transparent 50%);
   z-index: -2;
 }
@@ -32,7 +34,9 @@ body::after {
   z-index: -1;
 }
 
-/* ===== HEADER ===== */
+/* ============================= */
+/* HEADER */
+/* ============================= */
 
 header {
   display: flex;
@@ -76,7 +80,9 @@ header {
   color: #fff !important;
 }
 
-/* ===== HERO ===== */
+/* ============================= */
+/* HERO */
+/* ============================= */
 
 .hero {
   text-align: center;
@@ -111,7 +117,9 @@ header {
   font-weight: 600;
 }
 
-/* ===== SECTIONS ===== */
+/* ============================= */
+/* SECTION */
+/* ============================= */
 
 .section {
   padding: 80px 8%;
@@ -144,21 +152,97 @@ header {
   border: 1px solid #7b5cff;
 }
 
-/* ===== PRICING ===== */
+/* ============================= */
+/* PRICING */
+/* ============================= */
 
 .pricing {
   padding: 80px 8%;
   text-align: center;
 }
 
-/* ===== CONTACT ===== */
+.pricing-tabs {
+  margin-bottom: 40px;
+}
+
+.pricing-tabs button {
+  padding: 10px 22px;
+  border-radius: 30px;
+  border: none;
+  margin: 0 10px;
+  background: rgba(255,255,255,0.05);
+  color: #ccc;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.pricing-tabs button.active {
+  background: linear-gradient(90deg, #7b5cff, #4cc9f0);
+  color: #fff;
+}
+
+.pricing-content {
+  display: none;
+}
+
+.pricing-content.active {
+  display: block;
+}
+
+.pricing-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+}
+
+.pricing-card {
+  padding: 40px;
+  border-radius: 20px;
+  background: rgba(255,255,255,0.04);
+  backdrop-filter: blur(20px);
+  border: 1px solid rgba(255,255,255,0.06);
+  box-shadow: 0 0 30px rgba(123,92,255,0.12);
+  transition: 0.3s;
+  position: relative;
+}
+
+.pricing-card:hover {
+  transform: translateY(-6px);
+  border: 1px solid #7b5cff;
+}
+
+.pricing-card.popular {
+  border: 1px solid #7b5cff;
+}
+
+.badge {
+  position: absolute;
+  top: -12px;
+  right: 20px;
+  background: #7b5cff;
+  padding: 5px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+}
+
+.price {
+  font-size: 26px;
+  font-weight: 700;
+  margin: 15px 0;
+}
+
+/* ============================= */
+/* CONTACT */
+/* ============================= */
 
 .contact {
   padding: 80px 8%;
   text-align: center;
 }
 
-/* ===== WHATSAPP ===== */
+/* ============================= */
+/* WHATSAPP */
+/* ============================= */
 
 .whatsapp {
   position: fixed;
