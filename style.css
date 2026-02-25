@@ -30,10 +30,13 @@ header {
   position: sticky;
   top: 0;
 
-  backdrop-filter: blur(14px);
-background: rgba(12, 18, 40, 0.25);
+  /* Real Glass Effect */
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
 
-  border-bottom: 1px solid rgba(255,255,255,0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.15);
+
   z-index: 1000;
 }
 
@@ -338,6 +341,7 @@ form button {
     transform: translateY(-4px);
   }
 }
+
 
 
 
