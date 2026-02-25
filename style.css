@@ -12,7 +12,7 @@ body {
   position: relative;
 }
 
-/* Controlled Premium Gradient */
+/* Premium Controlled Background */
 body::before {
   content: "";
   position: fixed;
@@ -23,17 +23,15 @@ body::before {
   z-index: -2;
 }
 
-/* Soft Depth Overlay */
 body::after {
   content: "";
   position: fixed;
   inset: 0;
-  background: linear-gradient(to bottom, rgba(6,11,31,0.4), #060b1f 70%);
+  background: linear-gradient(to bottom, rgba(6,11,31,0.5), #060b1f 70%);
   z-index: -1;
 }
 
-/* Smaller Glow Orbs */
-
+/* Glow Orbs */
 .glow-orb {
   position: fixed;
   border-radius: 50%;
@@ -57,10 +55,8 @@ body::after {
   top: 200px;
   right: 10%;
 }
-  
 
 /* HEADER */
-
 header {
   display: flex;
   justify-content: space-between;
@@ -104,7 +100,6 @@ header {
 }
 
 /* HERO */
-
 .hero {
   text-align: center;
   padding: 100px 8% 80px;
@@ -114,7 +109,7 @@ header {
   font-size: 48px;
   margin-bottom: 20px;
   font-weight: 700;
-  text-shadow: 0 0 40px rgba(123,92,255,0.6);
+  text-shadow: 0 0 30px rgba(123,92,255,0.6);
 }
 
 .hero p {
@@ -136,11 +131,9 @@ header {
   text-decoration: none;
   color: #fff;
   font-weight: 600;
-  transition: 0.3s;
 }
 
 /* SECTIONS */
-
 .section {
   padding: 80px 8%;
   text-align: center;
@@ -163,7 +156,7 @@ header {
   background: rgba(255,255,255,0.04);
   backdrop-filter: blur(20px);
   border: 1px solid rgba(255,255,255,0.06);
-  box-shadow: 0 0 40px rgba(123,92,255,0.08);
+  box-shadow: 0 0 30px rgba(123,92,255,0.08);
   transition: 0.3s ease;
 }
 
@@ -173,7 +166,6 @@ header {
 }
 
 /* WHATSAPP */
-
 .whatsapp {
   position: fixed;
   bottom: 30px;
@@ -186,4 +178,3 @@ header {
   font-weight: 600;
   z-index: 9999;
 }
-
