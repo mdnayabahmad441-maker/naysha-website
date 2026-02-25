@@ -29,9 +29,11 @@ header {
   padding: 25px 8%;
   position: sticky;
   top: 0;
-  backdrop-filter: blur(20px);
-  background: rgba(10, 15, 30, 0.6);
-  border-bottom: 1px solid rgba(255,255,255,0.05);
+
+  backdrop-filter: blur(14px);
+  background: rgba(12, 18, 40, 0.35);
+
+  border-bottom: 1px solid rgba(255,255,255,0.08);
   z-index: 1000;
 }
 
@@ -336,4 +338,5 @@ form button {
     transform: translateY(-4px);
   }
 }
+
 
