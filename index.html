@@ -3,320 +3,276 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>NaySha Automation</title>
+<title>NaySha EduCore</title>
+
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="style.css">
+
+<style>
+
+/* ===== GLOBAL ===== */
+*{
+  margin:0;
+  padding:0;
+  box-sizing:border-box;
+  font-family:'Inter',sans-serif;
+}
+
+body{
+  background:#020617;
+  color:#fff;
+}
+
+/* ===== GRADIENT BACKGROUND ===== */
+.bg-blur{
+  position:fixed;
+  width:600px;
+  height:600px;
+  background:radial-gradient(circle,#2563eb,transparent);
+  filter:blur(120px);
+  top:-100px;
+  left:-100px;
+  z-index:-1;
+}
+
+/* ===== HEADER ===== */
+header{
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  padding:20px 40px;
+}
+
+.logo{
+  font-weight:700;
+  font-size:20px;
+  color:#60a5fa;
+}
+
+.nav a{
+  margin-left:20px;
+  text-decoration:none;
+  color:#cbd5f5;
+}
+
+.nav-btn{
+  background:#2563eb;
+  padding:10px 16px;
+  border-radius:8px;
+  color:#fff;
+}
+
+/* ===== HERO ===== */
+.hero{
+  text-align:center;
+  padding:100px 20px;
+}
+
+.hero h1{
+  font-size:48px;
+  font-weight:700;
+  background:linear-gradient(to right,#60a5fa,#a78bfa);
+  -webkit-background-clip:text;
+  color:transparent;
+}
+
+.hero p{
+  margin-top:20px;
+  color:#94a3b8;
+}
+
+.hero-btn{
+  margin-top:30px;
+  display:inline-block;
+  padding:14px 28px;
+  background:linear-gradient(135deg,#2563eb,#7c3aed);
+  border-radius:12px;
+  text-decoration:none;
+  color:#fff;
+  font-weight:600;
+}
+
+/* ===== SECTION ===== */
+.section{
+  padding:80px 20px;
+  max-width:1200px;
+  margin:auto;
+}
+
+.section h2{
+  text-align:center;
+  margin-bottom:40px;
+  font-size:32px;
+}
+
+/* ===== GRID ===== */
+.grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+  gap:20px;
+}
+
+/* ===== CARD ===== */
+.card{
+  background:rgba(255,255,255,0.05);
+  padding:20px;
+  border-radius:16px;
+  backdrop-filter:blur(10px);
+  border:1px solid rgba(255,255,255,0.1);
+  transition:0.3s;
+}
+
+.card:hover{
+  transform:translateY(-5px);
+}
+
+/* ===== PRICING ===== */
+.pricing-grid{
+  display:grid;
+  grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+  gap:20px;
+}
+
+.pricing-card{
+  padding:30px;
+  border-radius:16px;
+  background:rgba(255,255,255,0.05);
+  border:1px solid rgba(255,255,255,0.1);
+}
+
+.price{
+  font-size:32px;
+  margin:10px 0;
+}
+
+.popular{
+  border:2px solid #2563eb;
+}
+
+/* ===== CONTACT ===== */
+.contact{
+  padding:80px 20px;
+  text-align:center;
+}
+
+.contact input,
+.contact textarea{
+  width:100%;
+  padding:12px;
+  margin-top:10px;
+  border-radius:8px;
+  border:none;
+  background:#0f172a;
+  color:#fff;
+}
+
+.contact button{
+  margin-top:15px;
+  padding:12px;
+  background:#2563eb;
+  border:none;
+  border-radius:8px;
+  color:#fff;
+}
+
+/* ===== WHATSAPP ===== */
+.whatsapp{
+  position:fixed;
+  bottom:20px;
+  right:20px;
+  background:#25D366;
+  padding:12px 16px;
+  border-radius:30px;
+  color:#fff;
+  text-decoration:none;
+}
+
+</style>
+
 </head>
 
 <body>
 
-<header>
-  <div class="logo">
-    <img src="logo.png" alt="Logo">
-    <span>NaySha Automation</span>
-  </div>
+<div class="bg-blur"></div>
 
+<header>
+  <div class="logo">NaySha EduCore</div>
   <nav class="nav">
-    <a href="#services">Services</a>
+    <a href="#features">Features</a>
     <a href="#pricing">Pricing</a>
-    <a href="#contact" class="nav-btn">Get Started</a>
+    <a href="#contact" class="nav-btn">Get Demo</a>
   </nav>
 </header>
 
+<!-- HERO -->
 <section class="hero">
-  <h1>Build Smarter Systems. Scale Faster.</h1>
-  <p>Complete automation systems for Schools, Clinics & Real Estate businesses in India.</p>
-  <p class="authority-line">We don’t build websites. We build revenue systems.</p>
-  <a href="#contact" class="hero-btn">Get My Free Automation Blueprint</a>
+  <h1>Run Your School Smarter</h1>
+  <p>All-in-one School ERP with automation, attendance, fees & WhatsApp alerts.</p>
+  <a href="#contact" class="hero-btn">Get Free Demo</a>
 </section>
 
-<section id="services" class="section">
-  <h2>Our Automation Services</h2>
+<!-- FEATURES -->
+<section id="features" class="section">
+  <h2>Everything Your School Needs</h2>
   <div class="grid">
-    <div class="card">Lead Generation Systems</div>
-    <div class="card">CRM Setup</div>
-    <div class="card">AI Chatbots</div>
-    <div class="card">WhatsApp Automation</div>
-    <div class="card">Email Automation</div>
-    <div class="card">Full Business Automation</div>
+    <div class="card">📊 Dashboard Analytics</div>
+    <div class="card">👨‍🎓 Student Management</div>
+    <div class="card">📅 Attendance System</div>
+    <div class="card">💰 Fee Management</div>
+    <div class="card">📝 Exams & Report Cards</div>
+    <div class="card">📲 WhatsApp Notifications</div>
   </div>
 </section>
 
+<!-- WHY -->
 <section class="section">
-  <h2>Automation Should Feel Simple.</h2>
+  <h2>Why Schools Choose EduCore</h2>
   <div class="grid">
-    <div class="card">
-      <p>
-        At NaySha, we focus on clarity, structure, and performance.
-        No complicated tools. Just streamlined automation systems designed for growth.
-      </p>
-    </div>
+    <div class="card">⚡ Save 80% Admin Time</div>
+    <div class="card">📈 Real-Time Insights</div>
+    <div class="card">🔒 Secure & Reliable</div>
   </div>
 </section>
 
-<section class="section">
-  <h2>How NaySha Builds Your Automation System</h2>
-  <div class="grid">
-    <div class="card">
-      <h3>1. Audit & Strategy</h3>
-      <p>We analyze your workflow and identify automation opportunities.</p>
-    </div>
-    <div class="card">
-      <h3>2. Build & Integrate</h3>
-      <p>We implement CRM, WhatsApp, and AI tools into one system.</p>
-    </div>
-    <div class="card">
-      <h3>3. Optimize & Scale</h3>
-      <p>We refine performance and support long-term growth.</p>
-    </div>
-  </div>
-</section>
+<!-- PRICING -->
+<section id="pricing" class="section">
+  <h2>Simple Pricing</h2>
 
-<section class="section">
-  <h2>Proven Growth Results</h2>
-  <div class="grid">
-    <div class="card"><h3>2x–5x</h3><p>Increase in Qualified Leads</p></div>
-    <div class="card"><h3>40%</h3><p>Faster Response Time</p></div>
-    <div class="card"><h3>30%</h3><p>Higher Conversion Rate</p></div>
-  </div>
-</section>
+  <div class="pricing-grid">
 
-<section id="pricing" class="pricing">
-
-  <h2>Choose Your Automation Growth Plan</h2>
-  <p style="margin-top:10px; opacity:0.7;">
-    One-time setup + monthly optimization for continuous improvement.
-  </p>
-
-  <div class="pricing-tabs">
-    <button class="active" data-tab="school">School</button>
-    <button data-tab="clinic">Clinic</button>
-    <button data-tab="realestate">Real Estate</button>
-  </div>
-
-  <!-- SCHOOL -->
-  <div class="pricing-content active" id="school">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <h3>Starter School</h3>
-        <div class="price">₹6,999</div>
-        <p>₹1,499 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ CRM Setup</li>
-            <li>✔ WhatsApp Automation</li>
-            <li>✔ Inquiry Integration</li>
-            <li>✔ Basic Dashboard</li>
-            <li>✔ 30 Days Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-card popular">
-        <div class="badge">Most Popular</div>
-        <h3>Growth School</h3>
-        <div class="price">₹11,999</div>
-        <p>₹2,999 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Advanced CRM</li>
-            <li>✔ WhatsApp + Email Automation</li>
-            <li>✔ Performance Tracking</li>
-            <li>✔ Optimization Support</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-card">
-        <h3>Elite School</h3>
-        <div class="price">₹14,999</div>
-        <p>₹4,999 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Full Automation Suite</li>
-            <li>✔ AI Chatbot</li>
-            <li>✔ Advanced Analytics</li>
-            <li>✔ Priority Support</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- CLINIC -->
-  <div class="pricing-content" id="clinic">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <h3>Solo Doctor</h3>
-        <div class="price">₹9,999</div>
-        <p>₹2,499 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Appointment Automation</li>
-            <li>✔ WhatsApp Reminders</li>
-            <li>✔ CRM Tracking</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-card popular">
-        <div class="badge">Most Popular</div>
-        <h3>Multi-Doctor Clinic</h3>
-        <div class="price">₹19,999</div>
-        <p>₹4,999 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Multi-User CRM</li>
-            <li>✔ Automated Follow-ups</li>
-            <li>✔ Performance Dashboard</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-card">
-        <h3>High Volume Clinic</h3>
-        <div class="price">₹29,999</div>
-        <p>₹7,999 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Full Clinic Automation</li>
-            <li>✔ AI Integration</li>
-            <li>✔ Advanced Reports</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-  <!-- REAL ESTATE -->
-  <div class="pricing-content" id="realestate">
-    <div class="pricing-grid">
-
-      <div class="pricing-card">
-        <h3>Agent Starter</h3>
-        <div class="price">₹8,999</div>
-        <p>₹2,499 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Lead Capture</li>
-            <li>✔ WhatsApp Automation</li>
-            <li>✔ Basic CRM</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-card">
-        <h3>Agent Growth</h3>
-        <div class="price">₹15,999</div>
-        <p>₹3,999 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Advanced CRM</li>
-            <li>✔ Campaign Automation</li>
-            <li>✔ Performance Reports</li>
-          </ul>
-        </div>
-      </div>
-
-      <div class="pricing-card popular">
-        <div class="badge">Most Popular</div>
-        <h3>Agency Pro</h3>
-        <div class="price">₹29,999</div>
-        <p>₹6,999 / month</p>
-        <div class="plan-details">
-          <ul>
-            <li>✔ Full Agency Automation</li>
-            <li>✔ Multi-Agent CRM</li>
-            <li>✔ AI Chat Assistant</li>
-          </ul>
-        </div>
-      </div>
-
-    </div>
-  </div>
-
-</section>
-
-<section class="section">
-  <h2>Optional Add-Ons</h2>
-  <p style="margin-top:10px; opacity:0.7;">
-    Enhance your automation system with additional growth tools.
-  </p>
-
-  <div class="grid">
-
-    <div class="card">
-      <h3>Professional Website Creation</h3>
-      <p style="margin-top:10px;">
-        Modern, responsive business website designed to convert visitors into inquiries.
-      </p>
-      <p style="margin-top:15px; font-weight:600;">
-        Starting from ₹12,999
-      </p>
+    <div class="pricing-card">
+      <h3>Starter</h3>
+      <div class="price">₹4,999</div>
+      <p>₹999/month</p>
     </div>
 
-    <div class="card">
-      <h3>Custom Business App Development</h3>
-      <p style="margin-top:10px;">
-        Android/iOS app tailored to your operations with automation integration.
-      </p>
-      <p style="margin-top:15px; font-weight:600;">
-        Custom Pricing
-      </p>
+    <div class="pricing-card popular">
+      <h3>Growth</h3>
+      <div class="price">₹9,999</div>
+      <p>₹1,999/month</p>
     </div>
 
-    <div class="card">
-      <h3>Advanced Analytics Dashboard</h3>
-      <p style="margin-top:10px;">
-        Real-time performance tracking and automation insights for smarter decisions.
-      </p>
-      <p style="margin-top:15px; font-weight:600;">
-        ₹4,999 Setup
-      </p>
+    <div class="pricing-card">
+      <h3>Pro</h3>
+      <div class="price">₹14,999</div>
+      <p>₹3,999/month</p>
     </div>
 
   </div>
 </section>
 
+<!-- CONTACT -->
 <section id="contact" class="contact">
-  <h2>Book Your Free Automation Strategy Call</h2>
-  <div class="contact-wrapper">
-    <form>
-      <input type="text" placeholder="Your Name">
-      <input type="email" placeholder="Your Email">
-      <input type="text" placeholder="Your Phone Number">
-      <textarea placeholder="Tell us about your business"></textarea>
-      <button type="submit">Start My Automation System</button>
-    </form>
-
-    <div class="contact-card">
-      <h3>Contact Information</h3>
-      <p>Email: mdnayabahmad441@gmail.com</p>
-      <p>Phone: +91 8521297386</p>
-      <p>India</p>
-    </div>
-  </div>
+  <h2>Book Free Demo</h2>
+  <input placeholder="Name">
+  <input placeholder="Email">
+  <input placeholder="Phone">
+  <textarea placeholder="School Name"></textarea>
+  <button>Request Demo</button>
 </section>
 
-<a href="#" class="whatsapp">Chat on WhatsApp</a>
-
-<script>
-const tabs = document.querySelectorAll(".pricing-tabs button");
-const contents = document.querySelectorAll(".pricing-content");
-
-tabs.forEach(tab => {
-  tab.addEventListener("click", () => {
-    tabs.forEach(btn => btn.classList.remove("active"));
-    tab.classList.add("active");
-    contents.forEach(content => content.classList.remove("active"));
-    document.getElementById(tab.dataset.tab).classList.add("active");
-  });
-});
-</script>
+<a href="https://wa.me/918521297386" class="whatsapp">
+  WhatsApp
+</a>
 
 </body>
 </html>
