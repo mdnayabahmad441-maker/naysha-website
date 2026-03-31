@@ -20,32 +20,33 @@
 body{
   background:#020617;
   color:#fff;
-  overflow-x:hidden;
 }
 
-/* ===== BACKGROUND GLOW ===== */
-.bg{
-  position:fixed;
-  width:700px;
-  height:700px;
-  background:radial-gradient(circle,#3b82f6,transparent);
-  filter:blur(140px);
-  top:-200px;
-  left:-200px;
-  z-index:-1;
+/* ===== CONTAINER ===== */
+.container{
+  max-width:1200px;
+  margin:auto;
+  padding:0 20px;
 }
 
 /* ===== HEADER ===== */
 header{
+  position:sticky;
+  top:0;
+  background:rgba(2,6,23,0.8);
+  backdrop-filter:blur(10px);
+  z-index:100;
+}
+
+.header-inner{
   display:flex;
   justify-content:space-between;
   align-items:center;
-  padding:20px 8%;
+  padding:20px 0;
 }
 
 .logo{
   font-weight:700;
-  font-size:20px;
   color:#60a5fa;
 }
 
@@ -53,20 +54,20 @@ header{
   margin-left:25px;
   color:#cbd5f5;
   text-decoration:none;
-  font-size:14px;
 }
 
-.nav-btn{
+.btn{
   background:linear-gradient(135deg,#2563eb,#7c3aed);
   padding:10px 18px;
   border-radius:10px;
-  color:#fff !important;
+  color:#fff;
+  text-decoration:none;
 }
 
 /* ===== HERO ===== */
 .hero{
   text-align:center;
-  padding:120px 20px 80px;
+  padding:120px 0 80px;
 }
 
 .hero h1{
@@ -81,58 +82,54 @@ header{
 .hero p{
   margin-top:20px;
   color:#94a3b8;
-  max-width:600px;
-  margin-inline:auto;
 }
 
-.hero-btn{
+.hero .btn{
   margin-top:30px;
   display:inline-block;
-  padding:14px 30px;
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-  border-radius:12px;
-  font-weight:600;
-  text-decoration:none;
-  color:#fff;
-  box-shadow:0 10px 30px rgba(37,99,235,0.3);
 }
 
-/* ===== SECTION ===== */
-.section{
-  padding:80px 8%;
-}
-
-.section h2{
+/* ===== DASHBOARD PREVIEW ===== */
+.preview{
+  margin-top:60px;
+  background:rgba(255,255,255,0.05);
+  border-radius:20px;
+  padding:30px;
   text-align:center;
-  font-size:32px;
-  margin-bottom:50px;
 }
 
-/* ===== GRID ===== */
-.grid{
-  display:grid;
-  grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
-  gap:20px;
+/* ===== FEATURES ===== */
+.features{
+  padding:100px 0;
 }
 
-/* ===== CARD ===== */
-.card{
-  background:rgba(255,255,255,0.04);
-  border:1px solid rgba(255,255,255,0.08);
-  padding:25px;
-  border-radius:16px;
-  backdrop-filter:blur(10px);
-  transition:0.3s;
+.feature{
+  display:flex;
+  gap:40px;
+  margin-bottom:60px;
+  align-items:center;
 }
 
-.card:hover{
-  transform:translateY(-6px);
-  border-color:#3b82f6;
+.feature:nth-child(even){
+  flex-direction:row-reverse;
+}
+
+.feature-box{
+  flex:1;
+}
+
+.feature-box h3{
+  font-size:24px;
+  margin-bottom:10px;
+}
+
+.feature-box p{
+  color:#94a3b8;
 }
 
 /* ===== PRICING ===== */
 .pricing{
-  padding:100px 8%;
+  padding:100px 0;
   text-align:center;
 }
 
@@ -148,78 +145,28 @@ header{
   border-radius:20px;
   background:rgba(255,255,255,0.04);
   border:1px solid rgba(255,255,255,0.08);
-  transition:0.3s;
-}
-
-.pricing-card:hover{
-  transform:scale(1.03);
 }
 
 .price{
   font-size:38px;
-  font-weight:700;
   margin:15px 0;
 }
 
-/* ===== HIGHLIGHT ===== */
 .popular{
   border:2px solid #2563eb;
-  background:linear-gradient(145deg,rgba(37,99,235,0.15),rgba(124,58,237,0.15));
 }
 
-.badge{
-  background:#2563eb;
-  padding:6px 12px;
-  border-radius:20px;
-  font-size:12px;
-  display:inline-block;
-  margin-bottom:10px;
-}
-
-/* ===== CONTACT ===== */
-.contact{
-  padding:100px 8%;
+/* ===== CTA ===== */
+.cta{
   text-align:center;
+  padding:100px 0;
 }
 
-.form{
-  max-width:500px;
-  margin:auto;
-}
-
-.form input,
-.form textarea{
-  width:100%;
-  padding:14px;
-  margin-top:12px;
-  border-radius:10px;
-  border:none;
-  background:#0f172a;
-  color:#fff;
-}
-
-.form button{
-  margin-top:15px;
-  padding:14px;
-  width:100%;
-  border:none;
-  border-radius:10px;
-  background:linear-gradient(135deg,#2563eb,#7c3aed);
-  color:#fff;
-  font-weight:600;
-}
-
-/* ===== WHATSAPP ===== */
-.whatsapp{
-  position:fixed;
-  bottom:20px;
-  right:20px;
-  background:#25D366;
-  padding:12px 18px;
-  border-radius:30px;
-  text-decoration:none;
-  color:#fff;
-  font-size:14px;
+/* ===== FOOTER ===== */
+footer{
+  text-align:center;
+  padding:40px 0;
+  color:#64748b;
 }
 
 /* ===== MOBILE ===== */
@@ -229,8 +176,9 @@ header{
     font-size:32px;
   }
 
-  header{
-    padding:20px;
+  .feature{
+    flex-direction:column !important;
+    text-align:center;
   }
 
   .nav{
@@ -245,39 +193,57 @@ header{
 
 <body>
 
-<div class="bg"></div>
-
 <header>
-  <div class="logo">NaySha EduCore</div>
-  <nav class="nav">
-    <a href="#features">Features</a>
-    <a href="#pricing">Pricing</a>
-    <a href="#contact" class="nav-btn">Demo</a>
-  </nav>
+  <div class="container header-inner">
+    <div class="logo">NaySha EduCore</div>
+    <nav class="nav">
+      <a href="#features">Features</a>
+      <a href="#pricing">Pricing</a>
+      <a href="#contact" class="btn">Demo</a>
+    </nav>
+  </div>
 </header>
 
 <!-- HERO -->
-<section class="hero">
-  <h1>Run Your School Smarter</h1>
-  <p>Complete School ERP with automation, attendance, fees, exams & WhatsApp alerts.</p>
-  <a href="#contact" class="hero-btn">Get Free Demo</a>
-</section>
+<section class="hero container">
+  <h1>All-in-One School Management System</h1>
+  <p>Manage students, fees, attendance & exams — all in one powerful dashboard.</p>
+  <a href="#contact" class="btn">Get Free Demo</a>
 
-<!-- FEATURES -->
-<section id="features" class="section">
-  <h2>Everything Your School Needs</h2>
-  <div class="grid">
-    <div class="card">📊 Smart Dashboard</div>
-    <div class="card">👨‍🎓 Student Management</div>
-    <div class="card">📅 Attendance</div>
-    <div class="card">💰 Fees System</div>
-    <div class="card">📝 Exams & Results</div>
-    <div class="card">📲 WhatsApp Alerts</div>
+  <!-- DASHBOARD MOCK -->
+  <div class="preview">
+    <p>📊 Your School Dashboard Preview</p>
   </div>
 </section>
 
+<!-- FEATURES -->
+<section id="features" class="features container">
+
+  <div class="feature">
+    <div class="feature-box">
+      <h3>📊 Smart Dashboard</h3>
+      <p>Get real-time insights of students, fees, and performance.</p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-box">
+      <h3>📅 Attendance Automation</h3>
+      <p>Track attendance and send instant alerts to parents.</p>
+    </div>
+  </div>
+
+  <div class="feature">
+    <div class="feature-box">
+      <h3>💰 Fees Management</h3>
+      <p>Automate fees collection with reminders and reports.</p>
+    </div>
+  </div>
+
+</section>
+
 <!-- PRICING -->
-<section id="pricing" class="pricing">
+<section id="pricing" class="pricing container">
 
   <h2>Simple Pricing</h2>
 
@@ -290,7 +256,6 @@ header{
     </div>
 
     <div class="pricing-card popular">
-      <div class="badge">Most Popular</div>
       <h3>Growth</h3>
       <div class="price">₹3,999</div>
       <p>/ month</p>
@@ -306,23 +271,15 @@ header{
 
 </section>
 
-<!-- CONTACT -->
-<section id="contact" class="contact">
-  <h2>Book Free Demo</h2>
-
-  <div class="form">
-    <input placeholder="Name">
-    <input placeholder="Email">
-    <input placeholder="Phone">
-    <textarea placeholder="School Name"></textarea>
-    <button>Request Demo</button>
-  </div>
-
+<!-- CTA -->
+<section id="contact" class="cta container">
+  <h2>Book Your Free Demo</h2>
+  <a href="https://wa.me/918521297386" class="btn">Chat on WhatsApp</a>
 </section>
 
-<a href="https://wa.me/918521297386" class="whatsapp">
-  WhatsApp
-</a>
+<footer>
+  © 2026 NaySha EduCore. All rights reserved.
+</footer>
 
 </body>
 </html>
